@@ -9,7 +9,7 @@
     
     <title>
         
-            Paper Reading: Multisensory Causal Inference in the Brain |
+            Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS |
         
         Qianming Blog
     </title>
@@ -216,7 +216,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Paper Reading: Multisensory Causal Inference in the Brain
+                        Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS
                     </div>
                 
 
@@ -244,13 +244,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-02-20 19:04:34</span>
+                <span class="datetime">2025-05-29 16:17:46</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 17 2025 10:04:28 GMT+0800">2025-07-17 10:04:28</span>
+                    <span class="datetime" data-updated="Thu Jul 17 2025 10:07:05 GMT+0800">2025-07-17 10:07:05</span>
                 </span>
             
         
@@ -299,18 +299,27 @@
                     
 
                     
-                         <h1>Multisensory Causal Inference in the Brain</h1>
-<p>文章链接：<a class="link"   target="_blank" rel="noopener" href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1002075" >Multisensory Causal Inference in the Brain | PLOS Biology<i class="fas fa-external-link-alt"></i></a></p>
+                         <img  
+                       lazyload
+                       alt="image"
+                       data-src="/2025/05/29/Paper-Reading%EF%BC%9APERCEIVER%20IO%20A%20GENERAL%20ARCHITECTURE%20For%20Structured%20Input%20and%20Output/image-20250529164954752.png"
+                        class="" title="image-20250529164954752"
+                 >
+<h2 id="Abstract">Abstract</h2>
+<p>Perceiver IO的特点：</p>
 <ul class="lvl-0">
 <li class="lvl-2">
-<p>融合的两个核心内容：</p>
+<p>基于Perceiver（[<a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/360773327" >细读经典+代码解析]Perceiver: General Perception with Iterative Attention - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a>）模型，但是对于output的输出进行优化，使其在size和含义上可以<mark>灵活改变</mark>。</p>
 <ul class="lvl-2">
-<li class="lvl-4">如何判断两个或多个模态的输入来自同一个object？</li>
-<li class="lvl-4">针对来自同一个object的多模态输入，该如何融合？</li>
+<li class="lvl-4">input的尺寸也是可以灵活改变的。</li>
 </ul>
 </li>
+<li class="lvl-2">
+<p><mark>通用性强</mark>，可以完成多种任务，不拘泥于特定场景。</p>
+</li>
 </ul>
-<p>针对这个问题，optimal probabilistic inference 又称 是核心的解决方案</p>
+<h2 id="Introduction">Introduction</h2>
+<p>Output的获取是来自于输入到Decode中的Output query array的，并且需要注意到是，Output query array是针对Output进行设计的。其在设计上，与Output的含义高度相关。</p>
 
                     
                 </div>
@@ -342,14 +351,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/02/21/Python%E6%8B%BE%E9%81%97/"
-                                   title="Python拾遗"
+                                   href="/2025/07/17/Paper-Reading%EF%BC%9ARethinking%20Latent%20Redundancy%20in%20Behavior%20Cloning/"
+                                   title="Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Python拾遗</span>
+                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation</span>
                                         <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
@@ -359,11 +368,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/02/18/Paper-Reading%EF%BC%9AInteractions-between-auditory-statistics-processing-and-visual-experience-emerge-only-in-late-development/"
-                                   title="Paper Reading: Interactions between auditory statistics processing and visual experience emerge only in late development"
+                                   href="/2025/05/03/%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%8F%AF%E8%A7%86%E5%8C%96%E9%A2%84%E5%A4%87/"
+                                   title="注意力可视化预备"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: Interactions between auditory statistics processing and visual experience emerge only in late development</span>
+                                        <span class="post-nav-title-item text-ellipsis">注意力可视化预备</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -391,7 +400,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Multisensory Causal Inference in the Brain</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li></ol>
     </div>
 </div>
 
@@ -564,7 +573,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Multisensory Causal Inference in the Brain</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">2.</span> <span class="nav-text">Introduction</span></a></li></ol>
     </div>
 </div>
 
