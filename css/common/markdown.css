@@ -418,27 +418,33 @@ keep-mobile()
   background: #f5f5f5 !important;
   border-radius: 0.3rem;
 }
-.tips {
+.tip {
   padding-left: 10px;
-  background-color: rgba(52,152,219,0.3);
-  border-left: 4px solid #3498db;
-  color: #217bb8;
-}
-.success {
-  padding-left: 10px;
-  background-color: rgba(46,204,113,0.3);
+  background-color: rgba(46,204,113,0.1);
   border-left: 4px solid #2ecc71;
   color: #25a35a;
 }
+.note {
+  padding-left: 10px;
+  background-color: rgba(52,152,219,0.1);
+  border-left: 4px solid #3498db;
+  color: #217bb8;
+}
 .warning {
   padding-left: 10px;
-  background-color: rgba(241,196,15,0.3);
+  background-color: rgba(241,196,15,0.1);
   border-left: 4px solid #f1c40f;
   color: #c29d0b;
 }
-.danger {
+.caution {
   padding-left: 10px;
-  background-color: rgba(231,76,60,0.3);
+  background-color: rgba(231,76,60,0.1);
   border-left: 4px solid #e74c3c;
   color: #cf2b1a;
+}
+.important {
+  padding-left: 10px;
+  background-color: rgba(170,62,224,0.1);
+  border-left: 4px solid #9035e0;
+  color: #741dc0;
 }

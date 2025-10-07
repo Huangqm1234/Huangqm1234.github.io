@@ -9,13 +9,14 @@
     
     <title>
         
-            Paper Reading: Interactions between auditory statistics processing and visual experience emerge only in late development |
+            Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation |
         
         Qianming Blog
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/admonition.css">
     
         <link rel="shortcut icon" href="/images/Q.png">
     
@@ -216,7 +217,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Paper Reading: Interactions between auditory statistics processing and visual experience emerge only in late development
+                        Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation
                     </div>
                 
 
@@ -244,13 +245,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-02-18 08:28:20</span>
+                <span class="datetime">2025-07-17 08:38:43</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 17 2025 10:11:47 GMT+0800">2025-07-17 10:11:47</span>
+                    <span class="datetime" data-updated="Wed Jul 16 2025 22:07:55 GMT-0400">2025-07-17 10:07:55</span>
                 </span>
             
         
@@ -299,77 +300,8 @@
                     
 
                     
-                         <h1>Interactions between auditory statistics processing and visual experience emerge only in late development</h1>
-<p>文章网址：<a class="link"   target="_blank" rel="noopener" href="https://www.cell.com/iscience/fulltext/S2589-0042(21)01354-7?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2589004221013547%3Fshowall%3Dtrue" >Interactions between auditory statistics processing and visual experience emerge only in late development: iScience (cell.com)<i class="fas fa-external-link-alt"></i></a></p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>先天性和迟发性视觉剥夺对某些高阶听觉功能都有补偿作用，从而提高了相关表现。</p>
-</li>
-<li class="lvl-2">
-<p>对于听觉处理的模式：</p>
-<ul class="lvl-2">
-<li class="lvl-4">局部特征分析：声音频率上的细微差别，比如轿车的启动声音和熄火声音</li>
-<li class="lvl-4">全局表征计算：长时间的统计平均。可以理解为对轿车所有操作的声音取平均后得到的一个声音，这个声音可以代表汽车</li>
-</ul>
-</li>
-</ul>
-<img  
-                       lazyload
-                       alt="image"
-                       data-src="/2025/02/18/Paper-Reading%EF%BC%9AInteractions-between-auditory-statistics-processing-and-visual-experience-emerge-only-in-late-development/image-20250217232242417.png"
-                        class="" title="image-20250217232242417"
-                 >
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>A展示了如何对声音进行处理，从而产生不同的样本，为B和C提供数据支持</p>
-</li>
-<li class="lvl-2">
-<p>D展示了数据的特征，横轴表示时长，纵轴表示数据间的差异性。<mark>差异性越大，越容易分辨</mark>。</p>
-</li>
-</ul>
-<img  
-                       lazyload
-                       alt="image"
-                       data-src="/2025/02/18/Paper-Reading%EF%BC%9AInteractions-between-auditory-statistics-processing-and-visual-experience-emerge-only-in-late-development/image-20250217232300918.png"
-                        class="" title="image-20250217232300918"
-                 >
-<ul class="lvl-0">
-<li class="lvl-2">
-<p><strong>D（样本辨别实验）</strong>：展示了视力正常对照组（黑色）、先天性失明组（红色）和迟发性失明组（蓝色）在样本辨别实验中的正确率。迟发性失明组在部分时长下的表现显著差于其他两组。</p>
-</li>
-<li class="lvl-2">
-<p><strong>E（纹理辨别实验）</strong>：呈现了三组在纹理辨别实验中的正确率。三组表现随时长增加的趋势相似。</p>
-</li>
-<li class="lvl-2">
-<p><strong>F 部分</strong>：计算了两个实验（样本辨别减去纹理辨别）的相对差异，展示了不同组别该差异随声音片段时长的变化。<mark>迟发性失明组在该相对差异上与其他两组存在显著差异</mark>。</p>
-</li>
-</ul>
-<h2 id="Discussion">Discussion</h2>
-<h3 id="Auditory-statistics-processing-develops-regardless-of-visual-input-availability">Auditory statistics processing develops regardless of visual input availability</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>基于过往研究，存在两种预期：一是若视觉经验对听觉处理能力发展至关重要，那么 CB （先天失明）参与者在实验中的表现会<strong>逊于</strong>视力正常者（SC）；二是鉴于先天性或早期失明个体存在<strong>听觉增强的现象</strong>，CB 组可能会出现特定的补偿机制，进而在实验中<mark>展现出更优的表现</mark></p>
-</li>
-<li class="lvl-2">
-<p>实验结果显示，CB 组和 SC 组在实验中的表现并无显著差异。在样本辨别实验中，两组在短时长（40、91ms）时，<strong>样本辨别表现均优于纹理辨别</strong>；在长时长（478、1093、2500ms）时，纹理辨别表现<strong>均更优</strong>。这一结果有力地证明了<mark>听觉统计处理的发展并不依赖于<strong>早期视觉</strong>经验</mark>。</p>
-</li>
-</ul>
-<h3 id="Functional-interplay-between-selective-auditory-computations-and-vision">Functional interplay between selective auditory computations and vision</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>通过对比先天性失明（CB）、视力正常对照组（SC）和迟发性失明（LB）三组的表现，发现虽然早期视觉对听觉统计处理的典型发展并非必需，但在<mark>后期发展阶段</mark>，失明仍会影响<strong>局部特征</strong>的处理。</p>
-<ul class="lvl-2">
-<li class="lvl-4">听觉感知功能（例如频率检测和振幅调制）可能在<mark>独立于</mark>视觉输入的情况下发展，只有在功能<mark>发育完成</mark>后，感官之间才会产生交互作用。</li>
-<li class="lvl-4">后天失明的人可能更注重<strong>统计平均</strong>而非时间细节，因为其有助于在日常环境中识别声音对象。</li>
-</ul>
-</li>
-</ul>
-<h2 id="Conclusions">Conclusions</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>听觉和视觉都是<mark>先独自发展</mark>，待各自<strong>成熟后</strong>才交互作用共同发展。</p>
-</li>
-</ul>
+                         <p>论文题目：Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation</p>
+<p>当前Behavior Cloning(BC)为了提升通用性，会增大数据集、增加更多模态。但这样的问题是，无法得知因变量中是否会包含大量的<strong>冗余信息</strong>。</p>
 
                     
                 </div>
@@ -401,14 +333,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/02/20/Paper-Reading%EF%BC%9AMultisensory-Causal-Inference-in-the-Brain/"
-                                   title="Paper Reading: Multisensory Causal Inference in the Brain"
+                                   href="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/"
+                                   title="Linux上使用C++"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: Multisensory Causal Inference in the Brain</span>
+                                        <span class="post-nav-title-item text-ellipsis">Linux上使用C++</span>
                                         <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
@@ -418,11 +350,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/02/17/Paper-Reading%EF%BC%9ADevelopment-of-the-relationship-between-visual-selective-attention-and-auditory-change-detection/"
-                                   title="Paper Reading: Development of the relationship between visual selective attention and auditory change detection"
+                                   href="/2025/05/29/Paper-Reading%EF%BC%9APERCEIVER%20IO%20A%20GENERAL%20ARCHITECTURE%20For%20Structured%20Input%20and%20Output/"
+                                   title="Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: Development of the relationship between visual selective attention and auditory change detection</span>
+                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -450,7 +382,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Interactions between auditory statistics processing and visual experience emerge only in late development</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Discussion"><span class="nav-number">1.1.</span> <span class="nav-text">Discussion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Auditory-statistics-processing-develops-regardless-of-visual-input-availability"><span class="nav-number">1.1.1.</span> <span class="nav-text">Auditory statistics processing develops regardless of visual input availability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Functional-interplay-between-selective-auditory-computations-and-vision"><span class="nav-number">1.1.2.</span> <span class="nav-text">Functional interplay between selective auditory computations and vision</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusions"><span class="nav-number">1.2.</span> <span class="nav-text">Conclusions</span></a></li></ol></li></ol>
+        
     </div>
 </div>
 
@@ -623,7 +555,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Interactions between auditory statistics processing and visual experience emerge only in late development</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Discussion"><span class="nav-number">1.1.</span> <span class="nav-text">Discussion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Auditory-statistics-processing-develops-regardless-of-visual-input-availability"><span class="nav-number">1.1.1.</span> <span class="nav-text">Auditory statistics processing develops regardless of visual input availability</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Functional-interplay-between-selective-auditory-computations-and-vision"><span class="nav-number">1.1.2.</span> <span class="nav-text">Functional interplay between selective auditory computations and vision</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusions"><span class="nav-number">1.2.</span> <span class="nav-text">Conclusions</span></a></li></ol></li></ol>
+        
     </div>
 </div>
 

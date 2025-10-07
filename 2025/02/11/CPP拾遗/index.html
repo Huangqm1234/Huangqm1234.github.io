@@ -9,13 +9,14 @@
     
     <title>
         
-            Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation |
+            C++拾遗 |
         
         Qianming Blog
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/admonition.css">
     
         <link rel="shortcut icon" href="/images/Q.png">
     
@@ -216,7 +217,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Paper Reading: Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation
+                        C++拾遗
                     </div>
                 
 
@@ -244,13 +245,13 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2025-07-17 08:38:43</span>
+                <span class="datetime">2025-02-12 11:07:07</span>
             </span>
 
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 17 2025 10:07:55 GMT+0800">2025-07-17 10:07:55</span>
+                    <span class="datetime" data-updated="Wed Jul 16 2025 21:37:20 GMT-0400">2025-07-17 09:37:20</span>
                 </span>
             
         
@@ -259,7 +260,10 @@
             <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="post-category-ul">
                     
-                            <li class="category-item"><a href="/categories/Paper-Reading/">Paper Reading</a></li>
+                            <li class="category-item"><a href="/categories/Programming-languages/">Programming languages</a></li>
+                        
+                    
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Programming-languages/C/">C++</a></li>
                         
                     
                 </ul>
@@ -270,7 +274,7 @@
             <span class="post-tag meta-info-item border-box">
                 <ul class="post-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/Paper/">Paper</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/C/">C++</a></li>
                         
                     
                 </ul>
@@ -299,8 +303,24 @@
                     
 
                     
-                         <p>论文题目：Rethinking Latent Redundancy in Behavior Cloning: An Information Bottleneck Approach for Robot Manipulation</p>
-<p>当前Behavior Cloning(BC)为了提升通用性，会增大数据集、增加更多模态。但这样的问题是，无法得知因变量中是否会包含大量的<strong>冗余信息</strong>。</p>
+                         <h1>多态</h1>
+<p>动态多态是基于虚函数的。没有虚函数，就没有动态多态。</p>
+<p>多态的具体实现是由编译器在<mark>编译</mark>的时候实现的，所以被称为动态多态。伪代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">A</span>()</span><br><span class="line">&#123;</span><br><span class="line">	vptr = &amp;A::vftable;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>问题1：多态的具体形式。</p>
+<p>答案：父类指针指向子类对象，或者对子类对象的引用。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">myvirfunc</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Base* pa = <span class="keyword">new</span> <span class="built_in">Base</span>();</span><br><span class="line">	pa-&gt;<span class="built_in">myvirfunc</span>(); <span class="comment">// 多态</span></span><br><span class="line"></span><br><span class="line">	Base base;</span><br><span class="line">	base.<span class="built_in">myvirfunc</span>();<span class="comment">// 不是多态</span></span><br><span class="line"></span><br><span class="line">	Base* ybase = &amp;base;</span><br><span class="line">	ybase-&gt;<span class="built_in">myvirfunc</span>();<span class="comment">// 多态</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>base.myvirfunc()</code>不是多态的原因在于，其对应的汇编代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">00007FF6DB741BDC  lea         rcx,[base]  </span><br><span class="line">00007FF6DB741BE0  call        Base::myvirfunc (07FF6DB741073h)  </span><br><span class="line">00007FF6DB741BE5  nop  </span><br></pre></td></tr></table></figure>
+<p>这里的调用是硬编码的，意味着编译时已经确定调用哪个函数。而<code>ybase-&gt;myvirfunc();</code>的汇编代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">00007FF6DB741BEE  mov         rax,qword ptr [ybase]  </span><br><span class="line">00007FF6DB741BF2  mov         rax,qword ptr [rax]  </span><br><span class="line">00007FF6DB741BF5  mov         rcx,qword ptr [ybase]  </span><br><span class="line">00007FF6DB741BF9  call        qword ptr [rax]  </span><br><span class="line">00007FF6DB741BFB  nop </span><br></pre></td></tr></table></figure>
+<p>这里是在动态的链接，调用的是<code>vptr</code>指向的虚函数表。</p>
+</li>
+<li class="lvl-2">
+</li>
+</ul>
 
                     
                 </div>
@@ -313,7 +333,7 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/Paper/">Paper</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/C/">C++</a>
                                     </li>
                                 
                             </ul>
@@ -332,14 +352,14 @@
                             <div class="prev-post">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/"
-                                   title="Linux上使用C++"
+                                   href="/2025/02/17/Paper-Reading%EF%BC%9ADevelopment-of-the-relationship-between-visual-selective-attention-and-auditory-change-detection/"
+                                   title="Paper Reading: Development of the relationship between visual selective attention and auditory change detection"
                                 >
                                     <span class="left arrow-icon flex-center">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Linux上使用C++</span>
+                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: Development of the relationship between visual selective attention and auditory change detection</span>
                                         <span class="post-nav-item">Prev posts</span>
                                     </span>
                                 </a>
@@ -349,11 +369,11 @@
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2025/05/29/Paper-Reading%EF%BC%9APERCEIVER%20IO%20A%20GENERAL%20ARCHITECTURE%20For%20Structured%20Input%20and%20Output/"
-                                   title="Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS"
+                                   href="/2025/02/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%EF%BC%9A%E6%89%A9%E6%95%A3%E6%A8%A1%E5%9E%8B/"
+                                   title="深度学习：深度生成模型"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Paper Reading: PERCEIVER IO: A GENERAL ARCHITECTURE FOR STRUCTURED INPUTS &amp; OUTPUTS</span>
+                                        <span class="post-nav-title-item text-ellipsis">深度学习：深度生成模型</span>
                                         <span class="post-nav-item">Next posts</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
@@ -381,7 +401,7 @@
             <div class="pc-post-toc left-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">多态</span></a></li></ol>
     </div>
 </div>
 
@@ -554,7 +574,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">多态</span></a></li></ol>
     </div>
 </div>
 

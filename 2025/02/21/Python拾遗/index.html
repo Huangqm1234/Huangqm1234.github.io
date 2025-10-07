@@ -16,6 +16,7 @@
     
 <link rel="stylesheet" href="/css/style.css">
 
+    <link rel="stylesheet" href="/css/admonition.css">
     
         <link rel="shortcut icon" href="/images/Q.png">
     
@@ -250,7 +251,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 17 2025 10:04:45 GMT+0800">2025-07-17 10:04:45</span>
+                    <span class="datetime" data-updated="Wed Jul 16 2025 22:04:45 GMT-0400">2025-07-17 10:04:45</span>
                 </span>
             
         
@@ -303,10 +304,10 @@
 
                     
                          <p>代码仓库：<a class="link"   target="_blank" rel="noopener" href="https://gitee.com/qianminghuang/python-learning.git" >https://gitee.com/qianminghuang/python-learning.git<i class="fas fa-external-link-alt"></i></a></p>
-<div class="tips">
-<p><strong>提示</strong><br>
-Python中万物皆是对象</p>
-</div>
+<p>::: tips<br>
+<strong>提示</strong><br>
+Python中万物皆是对象<br>
+:::</p>
 <h2 id="可变类型与不可变类型">可变类型与不可变类型</h2>
 <ul class="lvl-0">
 <li class="lvl-2">
@@ -325,19 +326,19 @@ Python中万物皆是对象</p>
 <p>输出：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">original = [1, 2, 3, [4, 5, 6]]</span><br><span class="line">list_copy = [1, 2, 3, [4, 5, 6]]</span><br><span class="line">list_deepcopy = [1, 2, 3, [4, 5]]</span><br></pre></td></tr></table></figure>
 <p>假设<code>original</code>指向了 <code>[1,2,3,指针1]</code> ，由于<code>list_copy</code>是浅拷贝而来的，所以其指向的是另一个内存单元的<code>[1,2,3,指针1]</code>。而因为<code>list_deepcopy</code>是深拷贝而来，所以其对列表内部的元素不仅仅是简单的复制值，但遇到指针时，其会开辟一个新的内存单元，然后指向新的内存单元。如下图所示。</p>
-<style>.bgwevkdrvwjy{zoom:60%;}</style><img  
+<style>.nrvgjqxnamdw{zoom:60%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250317195849706.png"
-                        class="bgwevkdrvwjy" alt="image-20250317195849706"
+                        class="nrvgjqxnamdw" alt="image-20250317195849706"
                  >
 <p>所以当<code>original</code>中指针1所示指向的空间中的内容被修改后，list_copy中指针1所指向的空间中的内容同样被修改，其二者指向的是同一个内存空间。</p>
 <p><strong>需要注意到是</strong>，这张图中只是展示概念。真正的数组保存不可能是一个内存单元存下了所有内容，而是开辟一段连续的内存空间保存这些值，<code>original</code>则指向了这段连续的内存空间的起始地址。</p>
 <h2 id="函数">函数</h2>
-<div class="tips">
-<p><strong>提示</strong><br>
-当函数没有返回值的时候，<mark>函数默认返回<code>None</code></mark>。</p>
-</div>
+<p>::: tips<br>
+<strong>提示</strong><br>
+当函数没有返回值的时候，<mark>函数默认返回<code>None</code></mark>。<br>
+:::</p>
 <h3 id="None的应用">None的应用</h3>
 <ul class="lvl-0">
 <li class="lvl-2">
@@ -352,11 +353,11 @@ Python中万物皆是对象</p>
 <p>在函数内部，可以使用<code>global</code>关键词来设置全局变量。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>():</span><br><span class="line">    <span class="keyword">global</span> a <span class="comment"># 将函数内部的变量声明为全局变量</span></span><br><span class="line">    a = <span class="number">10</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;a在函数中的地址:<span class="subst">&#123;<span class="built_in">id</span>(a)&#125;</span>,值为<span class="subst">&#123;a&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">a = <span class="number">20</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;a在函数外的地址:<span class="subst">&#123;<span class="built_in">id</span>(a)&#125;</span>,值为<span class="subst">&#123;a&#125;</span>&quot;</span>)</span><br><span class="line">test()</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.abfcjdybkuix{zoom: 67%;}</style><img  
+<style>.fhosvbcidjar{zoom: 67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310204811790.png"
-                        class="abfcjdybkuix" alt="image-20250310204811790"
+                        class="fhosvbcidjar" alt="image-20250310204811790"
                  >
 <h3 id="Lambda匿名函数">Lambda匿名函数</h3>
 <p>函数的定义有两种：</p>
@@ -371,8 +372,8 @@ Python中万物皆是对象</p>
 <p>​	<img  
                        lazyload
                        alt="image"
-                       data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250221143930582.png"
-                        class="" title="image-20250221143930582"
+                       data-src="image-20250221143930582.png"
+                        alt="image-20250221143930582"
                  ></p>
 <h3 id="lambda函数具体应用场景：">lambda函数具体应用场景：</h3>
 <ul class="lvl-0">
@@ -389,47 +390,47 @@ Python中万物皆是对象</p>
 <p>以<code>*</code>开头的参数，其会根据传进参数的位置合并出一个<strong>元祖</strong>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">user_info_1</span>(<span class="params">*args</span>):</span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line"></span><br><span class="line">user_info_1(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</span><br><span class="line">user_info_1(<span class="string">&quot;test&quot;</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.hvscsptjyjfn{zoom: 50%;}</style><img  
+<style>.sxsaowfmrjhj{zoom: 50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310210708084.png"
-                        class="hvscsptjyjfn" alt="image-20250310210708084"
+                        class="sxsaowfmrjhj" alt="image-20250310210708084"
                  >
 <h5 id="关键字传递的不定长参数">关键字传递的不定长参数</h5>
 <p>以<code>**</code>开头，参数是键值对的形式，返回的是一个<strong>字典</strong>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">user_info_2</span>(<span class="params">**kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(kwargs)</span><br><span class="line">    </span><br><span class="line">user_info_2(name=<span class="string">&quot;test&quot;</span>, age=<span class="number">10</span>, sex = <span class="string">&quot;男&quot;</span>)</span><br><span class="line">user_info_2(<span class="number">10</span>,<span class="number">20</span>) <span class="comment"># 报错，不接受位置参数</span></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.lujeazxilmww{zoom: 67%;}</style><img  
+<style>.rxrugvuojehb{zoom: 67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310210949091.png"
-                        class="lujeazxilmww" alt="image-20250310210949091"
+                        class="rxrugvuojehb" alt="image-20250310210949091"
                  >
 <p>结合使用：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">user_info_3</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="built_in">print</span>(kwargs)</span><br><span class="line"></span><br><span class="line">user_info_3(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, name=<span class="string">&quot;test&quot;</span>, age=<span class="number">10</span>, sex = <span class="string">&quot;男&quot;</span>)</span><br><span class="line">user_info_3(<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">user_info_3(<span class="number">1</span>, <span class="number">2</span>, name=<span class="string">&quot;test&quot;</span>, <span class="number">4</span>, age=<span class="number">10</span>, sex = <span class="string">&quot;男&quot;</span>) <span class="comment"># 报错，位置参数不能在关键字参数后面</span></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.todbothidbwm{zoom:67%;}</style><img  
+<style>.wvypgievcbjf{zoom:67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310211323979.png"
-                        class="todbothidbwm" alt="image-20250310211323979"
+                        class="wvypgievcbjf" alt="image-20250310211323979"
                  >
 <h3 id="函数作为参数">函数作为参数</h3>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_func</span>(<span class="params">compute_func, a, b</span>):</span><br><span class="line">    result = compute_func(a, b) + <span class="number">10</span></span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">compute</span>(<span class="params">x, y</span>):</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line">test_func(compute, <span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.eteqegciivyk{zoom: 67%;}</style><img  
+<style>.clgzbkxrhpec{zoom: 67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310211734880.png"
-                        class="eteqegciivyk" alt="image-20250310211734880"
+                        class="clgzbkxrhpec" alt="image-20250310211734880"
                  >
 <p>本质上传递的是代码的执行逻辑</p>
 <h2 id="数据类型">数据类型</h2>
-<style>.pbkvckscyffr{zoom: 67%;}</style><img  
+<style>.hncbvmlyopkf{zoom: 67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310205525857.png"
-                        class="pbkvckscyffr" alt="image-20250310205525857"
+                        class="hncbvmlyopkf" alt="image-20250310205525857"
                  >
 <ul class="lvl-0">
 <li class="lvl-2">
@@ -465,11 +466,11 @@ Python中万物皆是对象</p>
 <p>案例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="built_in">print</span>(name) <span class="comment"># 注意，前文并没有定义name</span></span><br><span class="line"><span class="keyword">except</span> NameError <span class="keyword">as</span> e: </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;name未定义&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(e) <span class="comment"># 把异常打印出来</span></span><br></pre></td></tr></table></figure>
 <p>结果：</p>
-<style>.xhwxqdiqdhlx{zoom:80%;}</style><img  
+<style>.upirhbgssyhi{zoom:80%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310212421225.png"
-                        class="xhwxqdiqdhlx" alt="image-20250310212421225"
+                        class="upirhbgssyhi" alt="image-20250310212421225"
                  >
 <h4 id="捕获多个异常">捕获多个异常</h4>
 <p>基本语法：</p>
@@ -483,18 +484,18 @@ Python中万物皆是对象</p>
 <p><code>else</code>用于表示在<mark>没有异常</mark>的时候该执行什么行为。</p>
 <p>基本语法：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    可能错误的代码</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> 异常的别名:</span><br><span class="line">    如果出现异常执行的代码</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    没有异常时执行的代码</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    有没有异常都执行的代码</span><br></pre></td></tr></table></figure>
-<div class="tips">
-<p><strong>提示</strong><br>
-<code>finally</code>中一般都是用来执行<strong>资源关闭</strong>操作，比如文件的关闭</p>
-</div>
+<p>::: tips<br>
+<strong>提示</strong><br>
+<code>finally</code>中一般都是用来执行<strong>资源关闭</strong>操作，比如文件的关闭<br>
+:::</p>
 <p>案例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;正常执行&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(e)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;没有异常&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
-<style>.uylepfcajcip{zoom:67%;}</style><img  
+<style>.uzklyfrvonjm{zoom:67%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/02/21/Python%E6%8B%BE%E9%81%97/image-20250310213621033.png"
-                        class="uylepfcajcip" alt="image-20250310213621033"
+                        class="uzklyfrvonjm" alt="image-20250310213621033"
                  >
 <h3 id="异常的传递">异常的传递</h3>
 <p>假设有函数调用关系如下</p>
@@ -511,10 +512,10 @@ Python中万物皆是对象</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  File <span class="string">&quot;c:/Users/QianmingHuang/Desktop/Python-Learning/异常.py&quot;</span>, line 32, <span class="keyword">in</span> raise_func</span><br><span class="line">    raise Exception(<span class="string">&quot;x小于5&quot;</span>)</span><br><span class="line">Exception: x小于5</span><br></pre></td></tr></table></figure>
 <h3 id="自定义的异常">自定义的异常</h3>
 <p>用户需要创建一个继承了<code>Exception</code>类的类。</p>
-<div class="tips">
-<p><strong>提示</strong><br>
-有时候需要给一个模块写若干个自定义的异常</p>
-</div>
+<p>::: tips<br>
+<strong>提示</strong><br>
+有时候需要给一个模块写若干个自定义的异常<br>
+:::</p>
 <p>举例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ExamError</span>(<span class="title class_ inherited__">Exception</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;基于考试的自定义异常类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubmissionError</span>(<span class="title class_ inherited__">ExamError</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;提交时发生的错误&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, message=<span class="string">&quot;Cannot submit after the exam has ended&quot;</span></span>):</span><br><span class="line">        <span class="variable language_">self</span>.message = message</span><br><span class="line">        <span class="built_in">super</span>().__init__(<span class="variable language_">self</span>.message)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">submit_exam</span>(<span class="params">student, answers, exam_end_time</span>):</span><br><span class="line">    <span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">    current_time = datetime.now()</span><br><span class="line">    <span class="keyword">if</span> current_time &gt; exam_end_time:</span><br><span class="line">        <span class="keyword">raise</span> SubmissionError(<span class="string">&quot;You cannot submit the exam after the deadline.&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 处理提交逻辑</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;Exam submitted successfully!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设考试结束时间是之前的某个时间</span></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime, timedelta</span><br><span class="line">exam_end_time = datetime.now() - timedelta(hours=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    submit_exam(<span class="string">&quot;John Doe&quot;</span>, [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>], exam_end_time)</span><br><span class="line"><span class="keyword">except</span> SubmissionError <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;Submission failed: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>输出结果：</p>
@@ -609,10 +610,10 @@ Python中万物皆是对象</p>
 <p>输出：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D 的方法</span><br><span class="line">B 的方法</span><br><span class="line">C 的方法</span><br><span class="line">A 的方法</span><br><span class="line">(&lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.D&#x27;</span>&gt;, &lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.B&#x27;</span>&gt;, &lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.C&#x27;</span>&gt;, &lt;<span class="keyword">class</span> <span class="string">&#x27;__main__.A&#x27;</span>&gt;, &lt;<span class="keyword">class</span> <span class="string">&#x27;object&#x27;</span>&gt;)</span><br></pre></td></tr></table></figure>
 <p>可以看出，父类方法调用的顺序就是<code>__mro__</code>中设置的顺序。因此，<code>__mro__</code>将会帮助用户来解决来自不同父类的同名函数的调用问题。</p>
-<div class="danger">
-<p><strong>警告</strong><br>
-但是，最好不要通俗的认为<code>super()</code>就是一个父类对象。可以具体看后面的这两组实验。</p>
-</div>
+<p>::: danger<br>
+<strong>警告</strong><br>
+但是，最好不要通俗的认为<code>super()</code>就是一个父类对象。可以具体看后面的这两组实验。<br>
+:::</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ParentClass</span>:</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">class_method</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;调用了 <span class="subst">&#123;cls.__name__&#125;</span> 的类方法&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">id</span>(cls))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ChildClass</span>(<span class="title class_ inherited__">ParentClass</span>):</span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">class_method</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;调用了 <span class="subst">&#123;cls.__name__&#125;</span> 的类方法，现在要调用父类的类方法&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="built_in">id</span>(cls))</span><br><span class="line">        <span class="built_in">super</span>().class_method()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用子类的类方法</span></span><br><span class="line">ChildClass.class_method()</span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">调用了 ChildClass 的类方法，现在要调用父类的类方法</span><br><span class="line"><span class="number">2153593471488</span></span><br><span class="line">调用了 ChildClass 的类方法</span><br><span class="line"><span class="number">2153593471488</span></span><br></pre></td></tr></table></figure>
@@ -672,17 +673,17 @@ Python中万物皆是对象</p>
 </li>
 <li class="lvl-4">
 <p>daemon：线程是否为守护线程。</p>
-<div class="tips">
-<p><strong>提示</strong><br>
-<strong>守护线程</strong>是一种特殊的线程，其会在主线程退出时自动终止。这就意味着，当程序中只剩下守护线程的时候，主线程会直接结束。与之相对的是非守护线程，主线程会等待所有非守护线程执行完毕后才会退出程序。</p>
-</div>
+<p>::: tips<br>
+<strong>提示</strong><br>
+<strong>守护线程</strong>是一种特殊的线程，其会在主线程退出时自动终止。这就意味着，当程序中只剩下守护线程的时候，主线程会直接结束。与之相对的是非守护线程，主线程会等待所有非守护线程执行完毕后才会退出程序。<br>
+:::</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">daemon_function</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Daemon thread started&quot;</span>)</span><br><span class="line">    time.sleep(<span class="number">5</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Daemon thread finished&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">non_daemon_function</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Non-daemon thread started&quot;</span>)</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Non-daemon thread finished&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建守护线程</span></span><br><span class="line">daemon_thread = threading.Thread(target=daemon_function, daemon=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 创建非守护线程</span></span><br><span class="line">non_daemon_thread = threading.Thread(target=non_daemon_function)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动线程</span></span><br><span class="line">daemon_thread.start()</span><br><span class="line">non_daemon_thread.start()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;\nMain thread continues...&quot;</span>)</span><br><span class="line"><span class="comment"># 主线程不做额外等待，直接结束</span></span><br></pre></td></tr></table></figure>
 <p>输出：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Daemon thread started</span><br><span class="line">Non-daemon thread started</span><br><span class="line">Main thread continues...</span><br><span class="line"></span><br><span class="line">Non-daemon thread finished</span><br></pre></td></tr></table></figure>
-<div class="danger">
-<p><strong>警告</strong><br>
-在jupyter notebook中的结果可能不同。其可能会输出到 Daemon thread finished。</p>
-</div>
+<p>::: danger<br>
+<strong>警告</strong><br>
+在jupyter notebook中的结果可能不同。其可能会输出到 Daemon thread finished。<br>
+:::</p>
 <ul class="lvl-4">
 <li class="lvl-6">
 <p>使用场景：</p>

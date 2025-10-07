@@ -1,0 +1,38 @@
+/* Admonition 基础容器样式 */
+.admonition {
+  margin: 1.5em 0;
+  padding: 1em 1.2em;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 提示（TIP）样式 */
+.admonition.tip {
+  background-color: #f3faf3;
+  border-left: 4px solid #42b983; /* 左侧提示色 */
+}
+
+/* 警告（WARNING）样式 */
+.admonition.warning {
+  background-color: #fff8f0;
+  border-left: 4px solid #ff9800; /* 左侧警告色 */
+}
+
+/* 危险（DANGER）样式 */
+.admonition.danger {
+  background-color: #fff0f0;
+  border-left: 4px solid #f56c6c; /* 左侧危险色 */
+}
+
+/* 成功（SUCCESS）样式 */
+.admonition.success {
+  background-color: #f0fdf4;
+  border-left: 4px solid #10b981; /* 左侧成功色 */
+}
+
+/* 标题样式（可选，用于强调容器标题） */
+.admonition-title {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: inherit;
+}
