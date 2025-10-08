@@ -1,5 +1,19 @@
-
-
-:root {
-    --post-img-align: 0 auto;
+/* 图片居中核心样式：块级 + 自动左右边距 */
+.post-content img {
+    display: block !important;
+    margin: 10px auto !important; /* 上下10px间距，左右自动居中 */
+    max-width: 80%; /* 限制图片最大宽度，避免超屏（可自定义） */
+    height: auto !important; /* 保持图片比例 */
 }
+
+/* 清除包裹图片的父容器缩进（仅影响含图片的容器） */
+.post-content p:has(> img),
+.post-content div:has(> img),
+.post-content figure:has(> img) {
+    text-indent: 0 !important;    /* 清除文字缩进 */
+    margin-left: 0 !important;    /* 清除左外边距 */
+    padding-left: 0 !important;   /* 清除左内边距 */
+    text-align: center !important;/* 容器内元素居中（双重保险） */
+}
+
+/***********************************/
