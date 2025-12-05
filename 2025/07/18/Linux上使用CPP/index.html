@@ -306,11 +306,11 @@
                          <h2 id="GCC编译器">GCC编译器</h2>
 <p>gcc可以用于编译C代码（g<ins>用于编译C</ins>代码）</p>
 <h3 id="编译过程">编译过程</h3>
-<style>.ewngjyamvxvp{zoom: 50%;}</style><img  
+<style>.nbnbkhejndjj{zoom: 50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722182516646.png"
-                        class="ewngjyamvxvp" alt="image-20250722182516646"
+                        class="nbnbkhejndjj" alt="image-20250722182516646"
                  >
 <p>原始的 test.cpp 文件</p>
 <ol>
@@ -318,11 +318,11 @@
 <p>预处理：生成<code>.i</code>文件</p>
 <p>在这一步骤中，编译器会对宏定义、常量进行处理，比如对常量进行替换操作。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -E 表示仅进行预处理。</span></span><br><span class="line">g++ -E test.cpp -o test.i</span><br></pre></td></tr></table></figure>
-<style>.vhfizeykijvj{zoom:50%;}</style><img  
+<style>.teytlfggdofv{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722182607745.png"
-                        class="vhfizeykijvj" alt="image-20250722182607745"
+                        class="teytlfggdofv" alt="image-20250722182607745"
                  >
 <p><code>CONST_NUM</code>被替换成了40，同时前面的iostream库也被导入近来，所以会突增到28650行。</p>
 </li>
@@ -330,11 +330,11 @@
 <p>编译：生成<code>.s</code>文件</p>
 <p>将代码转化为汇编语言。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -S 表示仅进行汇编</span></span><br><span class="line">g++ -S test.i -o test.s</span><br></pre></td></tr></table></figure>
-<style>.luopvbcfxxbo{zoom: 50%;}</style><img  
+<style>.xgobbzrelvia{zoom: 50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722182821136.png"
-                        class="luopvbcfxxbo" alt="image-20250722182821136"
+                        class="xgobbzrelvia" alt="image-20250722182821136"
                  >
 <p>汇编程序。</p>
 </li>
@@ -342,11 +342,11 @@
 <p>汇编：生成<code>.o</code>文件</p>
 <p>将汇编代码转化为计算机能理解的二进制代码。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -C 表示仅进行汇编</span></span><br><span class="line">g++ -c test.s -o test.o</span><br></pre></td></tr></table></figure>
-<style>.flyhboybjoyz{zoom:50%;}</style><img  
+<style>.cybxvhnyewkg{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722183149348.png"
-                        class="flyhboybjoyz" alt="image-20250722183149348"
+                        class="cybxvhnyewkg" alt="image-20250722183149348"
                  >
 <p>二进制代码。</p>
 </li>
@@ -383,11 +383,11 @@
 </li>
 </ul>
 <h3 id="g-多文件编译">g++多文件编译</h3>
-<style>.homuxzoxinaq{zoom:50%;}</style><img  
+<style>.rugxnbazpkyi{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722185238502.png"
-                        class="homuxzoxinaq" alt="image-20250722185238502"
+                        class="rugxnbazpkyi" alt="image-20250722185238502"
                  >
 <p>文件结构如图所示。</p>
 <ul class="lvl-0">
@@ -403,21 +403,21 @@
 <li class="lvl-4">
 <p>静态库版本：将<code>src.cpp</code>生成一个静态库，随后再链接到<code>main.cpp</code>上。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> src <span class="comment"># 在src文件夹下</span></span><br><span class="line"><span class="comment">#在./src/下</span></span><br><span class="line"><span class="comment">#开始生成静态库</span></span><br><span class="line">g++ swap.cpp -c -I../include <span class="comment"># -c表示生成一个二进制文件 -I制定了swap.h中头文件所在位置</span></span><br><span class="line">	<span class="comment"># 随后，会输出一个swap.o的二进制文件</span></span><br><span class="line">ar rs libSwap.a swap.o <span class="comment"># 将二进制文件归档为静态库文件libSwap.a</span></span><br><span class="line">	<span class="comment"># 随后，会输出一个lisSwap.a </span></span><br><span class="line">	<span class="comment"># 此时 src内保存了：libSwap.a  swap.cpp  swap.o</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> .. <span class="comment"># 回到核心目录下</span></span><br><span class="line"><span class="comment"># 此处在./文件夹下</span></span><br><span class="line"><span class="comment"># 链接静态库</span></span><br><span class="line">g++ main.cpp -Iinclude -Lsrc -lSwap -o static_main.out <span class="comment"># 注意，这里的-l后面写的是Swap是因为，-l操作会自动的在后接上的内容（Swap）前加lib后加.a。此时-l会去寻找libSwap.a</span></span><br></pre></td></tr></table></figure>
-<style>.xtpfsbpsxtjj{zoom:50%;}</style><img  
+<style>.vwugfeosbynz{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722210833150.png"
-                        class="xtpfsbpsxtjj" alt="image-20250722210833150"
+                        class="vwugfeosbynz" alt="image-20250722210833150"
                  >
 </li>
 <li class="lvl-4">
 <p>动态库版本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> src</span><br><span class="line"><span class="comment">#在./src下进行</span></span><br><span class="line">g++ swap.cpp -I../include -fPIC -shared -o libSwap.so <span class="comment"># -fPIC 表示生成与位置无关文件，动态链接库必备。 -shared表示生成动态链接库</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ../</span><br><span class="line"><span class="comment">#在./下进行</span></span><br><span class="line"><span class="comment">#链接动态库</span></span><br><span class="line">g++ main.cpp -Iinclude -Lsrc -lSwap -o share_main.out <span class="comment"># 同理-l会加上东西，但是编译器会优先尝试动态库（libSwap.so)</span></span><br></pre></td></tr></table></figure>
-<style>.rnaodalmydas{zoom:50%;}</style><img  
+<style>.kwdwodblqodu{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250722210944958.png"
-                        class="rnaodalmydas" alt="image-20250722210944958"
+                        class="kwdwodblqodu" alt="image-20250722210944958"
                  >
 </li>
 </ul>
@@ -426,32 +426,32 @@
 <h3 id=""></h3>
 <h2 id="GDB调试器">GDB调试器</h2>
 <h3 id="在Vscode中调试代码">在Vscode中调试代码</h3>
-<style>.zmyhdmmwonrj{zoom:50%;}</style><img  
+<style>.blzldrpwlteb{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250725212419930.png"
-                        class="zmyhdmmwonrj" alt="image-20250725212419930"
+                        class="blzldrpwlteb" alt="image-20250725212419930"
                  >
 <p>点击图片中的”创建launch.json文件&quot;</p>
 <p>launch.json文件的编写如下</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// launch.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// 使用 IntelliSense 了解相关属性。 </span></span><br><span class="line">    <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">    <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;my_cmake_exe&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/build/my_cmake_exe&quot;</span><span class="punctuation">,</span> <span class="comment">//可执行文件所在位置</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gdb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;setupCommands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="punctuation">&#123;</span></span><br><span class="line">                    <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;为 gdb 启用整齐打印&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;text&quot;</span><span class="punctuation">:</span> <span class="string">&quot;-enable-pretty-printing&quot;</span><span class="punctuation">,</span></span><br><span class="line">                    <span class="attr">&quot;ignoreFailures&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">                <span class="punctuation">&#125;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Build&quot;</span> <span class="comment">// 会调用tasks.json中相对的指令，完成自动编译</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>注意修改program选项，指定为my_cmake_exe。同时，在根目录的CMakeLists.txt中应该编写<code>set(CMAKE_BUILD_TYPE Debug)</code>，并且确保<code>set(CMAKE_CXX_FLAGS &quot;$&#123;CMAKE_CXX_FLAGS&#125; -Wall&quot;)</code>中没有<strong>设置-O2选项</strong>，避免因为优化代码，导致调试的不准确。</p>
 <p>随后配置tasks.json文件。</p>
-<style>.cedkzgljpsvm{zoom:50%;}</style><img  
+<style>.crfnkbvpsgxj{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250725213039540.png"
-                        class="cedkzgljpsvm" alt="image-20250725213039540"
+                        class="crfnkbvpsgxj" alt="image-20250725213039540"
                  >
 <p>点击“配置默认生成任务”，生成一个tasks.json</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tasks.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/build&quot;</span> <span class="comment">// 相当于 cd $&#123;workspaceFolder&#125;/build</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">		<span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cmake&quot;</span><span class="punctuation">,</span> <span class="comment">// 这一部分的名称</span></span><br><span class="line">			<span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cmake&quot;</span><span class="punctuation">,</span> <span class="comment">// 这一部分要执行的命令</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">				<span class="string">&quot;..&quot;</span></span><br><span class="line">			<span class="punctuation">]</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;make&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">				<span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">			<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;make&quot;</span><span class="punctuation">,</span></span><br><span class="line">			<span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">		<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">		<span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Build&quot;</span><span class="punctuation">,</span> <span class="comment">// 这个lable应该被输入到launch.json</span></span><br><span class="line">			<span class="attr">&quot;dependsOrder&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sequence&quot;</span><span class="punctuation">,</span> <span class="comment">// 按照列出的顺序执行依赖</span></span><br><span class="line">			<span class="attr">&quot;dependsOn&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">//依赖项的名字就是前面的label</span></span><br><span class="line">				<span class="string">&quot;cmake&quot;</span><span class="punctuation">,</span></span><br><span class="line">				<span class="string">&quot;make&quot;</span></span><br><span class="line">			<span class="punctuation">]</span></span><br><span class="line">		<span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>随后，<mark>无需再手动编译</mark>，直接执行调试就可以对程序<strong>自动的进行编译</strong>。</p>
 <p>再次展示文件结构。</p>
-<style>.ipynqtakmdyx{zoom:50%;}</style><img  
+<style>.zhkxrmbbchot{zoom:50%;}</style><img  
                        lazyload
                        alt="image"
                        data-src="/2025/07/18/Linux%E4%B8%8A%E4%BD%BF%E7%94%A8CPP/image-20250725215029974.png"
-                        class="ipynqtakmdyx" alt="image-20250725215029974"
+                        class="zhkxrmbbchot" alt="image-20250725215029974"
                  >
 <h2 id="CMake">CMake</h2>
 <p><strong>跨平台</strong>的安装编译工具，可以用于描述<strong>所有平台</strong>的<strong>编译</strong>过程。没有Cmake，你就需要给每一个平台都写一个工程构建文件（比如Makefile、Xcode等）。有了Cmake，你只需要与Cmake打交道就可以了，只需要修改CMakeList.txt。</p>
