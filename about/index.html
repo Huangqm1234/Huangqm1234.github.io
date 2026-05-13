@@ -1,525 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Qianming Huang">
-    
-    <title>
-        
-            About |
-        
-        Qianming Blog
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="/css/admonition.css">
-    
-        <link rel="shortcut icon" href="/images/Q.png">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/regular.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/solid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/font/css/brands.min.css">
-    
-        
-            
-                
-<link rel="stylesheet" href="/css/custom.css">
-
-            
-        
-    
-    <script class="keep-theme-configurations">
-    const KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Qianming Blog","author":"Qianming Huang","avatar":"/images/stone_tiger.jpg","logo":"/images/Q.png","favicon":"/images/Q.png"},"menu":{"home":"/","archives":"/archives","categories":"/categories","cv":"/about"},"first_screen":{"enable":true,"background_img":"/images/background.jpg","background_img_dark":"/images/background.jpg","description":"开放 与 共享 || Openness and Sharing","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/Huangqm1234","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"Brad_Huang@outlook.com"}},"scroll":{"progress_bar":true,"percent":false,"hide_header":false},"home":{"announcement":null,"category":true,"tag":true,"post_datetime_format":"YYYY-MM-DD HH:mm"},"post":{"author_badge":{"enable":true,"level_badge":false,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"left"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":true,"site_pv":false,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true,"provider":"cdnjs"},"pjax":{"enable":true},"footer":{"since":2025,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":true,"css":["/css/custom.css"],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
-    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
-    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
-  </script>
-<meta name="generator" content="Hexo 7.3.0"></head>
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qianming Huang</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 15px; line-height: 1.65; color: #1c1c2e; background: #fff; }
+a { color: #1565c0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+/* ---- Nav ---- */
+.site-nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e8ec; padding: 0 44px; display: flex; align-items: center; height: 54px; }
+.site-nav-brand { font-weight: 700; color: #1c1c2e; font-size: 0.95rem; margin-right: auto; letter-spacing: 0.01em; }
+.site-nav-brand a { color: inherit; }
+.site-nav-brand a:hover { text-decoration: none; opacity: 0.75; }
+.site-nav-links { display: flex; gap: 30px; list-style: none; }
+.site-nav-links a { color: #555; font-size: 0.875rem; font-weight: 500; transition: color 0.15s; }
+.site-nav-links a:hover, .site-nav-links a.active { color: #1565c0; text-decoration: none; }
+/* ---- Page ---- */
+.page { max-width: 860px; margin: 0 auto; padding: 60px 28px 88px; }
+/* ---- Hero ---- */
+.hero { display: flex; gap: 48px; align-items: flex-start; margin-bottom: 60px; }
+.hero-photo { flex-shrink: 0; }
+.hero-photo img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; display: block; border: 3px solid #e5e8ec; box-shadow: 0 3px 16px rgba(0,0,0,0.09); }
+.hero-info { flex: 1; padding-top: 4px; }
+.hero-name { font-size: 1.95rem; font-weight: 700; color: #1c1c2e; line-height: 1.2; margin-bottom: 5px; }
+.hero-phonetic { color: #999; font-size: 0.87rem; margin-bottom: 16px; letter-spacing: 0.01em; }
+.hero-bio { color: #333; font-size: 0.95rem; line-height: 1.75; margin-bottom: 18px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+.hero-badge { background: #eef3fc; border: 1px solid #c6d6f0; color: #1a56b0; border-radius: 4px; padding: 3px 10px; font-size: 0.79rem; }
+.hero-contacts { display: flex; gap: 18px; flex-wrap: wrap; }
+.hero-contact { display: inline-flex; align-items: center; gap: 5px; color: #555; font-size: 0.86rem; transition: color 0.15s; }
+.hero-contact:hover { color: #1565c0; text-decoration: none; }
+/* ---- Section ---- */
+.section { margin-bottom: 52px; }
+.section-title { font-size: 1.05rem; font-weight: 700; color: #1c1c2e; padding-bottom: 10px; border-bottom: 2px solid #1565c0; margin-bottom: 24px; display: inline-block; letter-spacing: 0.01em; }
+/* ---- Education ---- */
+.edu-item { display: flex; gap: 24px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #f0f0f4; }
+.edu-item:last-child { border-bottom: none; }
+.edu-period { flex-shrink: 0; width: 148px; color: #999; font-size: 0.81rem; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.edu-school { font-weight: 600; font-size: 0.96rem; color: #1c1c2e; margin-bottom: 3px; }
+.edu-degree { color: #666; font-size: 0.87rem; }
+/* ---- Publications ---- */
+.pub-item { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid #f0f0f4; align-items: flex-start; }
+.pub-item:last-child { border-bottom: none; }
+.pub-num { flex-shrink: 0; width: 30px; color: #1565c0; font-weight: 600; font-size: 0.86rem; padding-top: 2px; }
+.pub-title { font-weight: 600; color: #1c1c2e; font-size: 0.93rem; line-height: 1.55; margin-bottom: 5px; }
+.pub-authors { color: #555; font-size: 0.83rem; margin-bottom: 4px; line-height: 1.5; }
+.pub-authors strong { color: #1c1c2e; }
+.pub-venue { color: #888; font-style: italic; font-size: 0.82rem; margin-bottom: 9px; }
+.pub-link { display: inline-flex; align-items: center; gap: 3px; background: #eef3fc; border: 1px solid #c6d6f0; color: #1565c0; border-radius: 4px; padding: 2px 10px; font-size: 0.78rem; text-decoration: none; transition: background 0.15s; }
+.pub-link:hover { background: #d6e5f8; text-decoration: none; }
+/* ---- Skills ---- */
+.skills-block { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; align-items: start; }
+.skills-label { color: #999; font-size: 0.81rem; font-weight: 500; padding-top: 5px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.skill-tag { background: #f5f6f8; border: 1px solid #e0e3e8; color: #333; border-radius: 4px; padding: 4px 11px; font-size: 0.81rem; font-family: 'SFMono-Regular', 'Consolas', monospace; }
+/* ---- Interests ---- */
+.interest-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.interest-tag { background: #f5f6f8; border: 1px solid #e5e8ec; color: #444; border-radius: 20px; padding: 6px 16px; font-size: 0.86rem; }
+/* ---- Footer ---- */
+.page-footer { text-align: center; color: #bbb; font-size: 0.79rem; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f0f0f4; }
+.page-footer a { color: #aaa; }
+/* ---- Responsive ---- */
+@media (max-width: 580px) {
+  .hero { flex-direction: column; gap: 24px; align-items: center; text-align: center; }
+  .hero-badges, .hero-contacts { justify-content: center; }
+  .edu-item { flex-direction: column; gap: 4px; }
+  .edu-period { width: auto; }
+  .skills-block { grid-template-columns: 1fr; }
+  .site-nav { padding: 0 18px; }
+  .page { padding: 40px 18px 64px; }
+  .hero-photo img { width: 130px; height: 130px; }
+}
+</style>
+</head>
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
+<nav class="site-nav">
+<span class="site-nav-brand"><a href="/">Qianming&#39;s Blog</a></span>
+<ul class="site-nav-links">
+<li><a href="/">Home</a></li>
+<li><a href="/archives">Archives</a></li>
+<li><a href="/categories">Categories</a></li>
+<li><a href="/about" class="active">About</a></li>
+</ul>
+</nav>
+<main class="page">
+<div class="hero">
+<div class="hero-photo">
+<img    
+                       lazyload
+                       alt="image"
+                       data-src="https://cdn.jsdelivr.net/gh/Huangqm1234/Cloud_image_hosting/20260422171315335.png"
+                         alt="Qianming Huang"
+                 >
 </div>
-
-
-
-<main class="page-container border-box">
-    <!-- home first screen  -->
-    
-
-    <!-- page content -->
-    <div class="page-main-content border-box">
-        <div class="page-main-content-top">
-            
-<header class="header-wrapper">
-
-    <div class="border-box header-content">
-        <div class="left flex-start border-box">
-            
-                <a class="logo-image border-box" href="/">
-                    <img src="/images/Q.png">
-                </a>
-            
-            <a class="site-name border-box" href="/">
-               Qianming Blog
-            </a>
-        </div>
-
-        <div class="right border-box">
-            <div class="pc border-box">
-                <ul class="menu-list border-box">
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/">
-                                
-                                HOME
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
-                                
-                                ARCHIVES
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/categories">
-                                
-                                CATEGORIES
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box active">
-                            <a class="menu-text-color border-box" href="/about">
-                                
-                                CV
-                                
-                            </a>
-                            
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="menu-text-color fas search fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile border-box flex-start">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list border-box">
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
-                            
-                            HOME
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            ARCHIVES
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
-                            
-                            CATEGORIES
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu active">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/about">
-                            
-                            CV
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
-        </div>
-
-        <div class="page-main-content-middle border-box">
-
-            <div class="main-content border-box">
-                
-
-                    
-
-<div class="fade-in-down-animation">
-    <div class="page-template-container border-box keep-container ">
-        <!-- page top -->
-        
-
-        <!-- page bottom -->
-        <div class="page-template-bottom border-box">
-            <!-- use page template -->
-            
-
-            <!-- page content -->
-            <div class="page-content border-box keep-markdown-body ">
-                
-                    <h1>About me</h1>
-<div style="display:flex; justify-content:center;">
-  <img 
-      src="https://cdn.jsdelivr.net/gh/Huangqm1234/Cloud_image_hosting/20260422171315335.png"
-      data-src="https://cdn.jsdelivr.net/gh/Huangqm1234/Cloud_image_hosting/20260422171315335.png"
-      lazyload
-      alt="蓝底"
-      style="width:20%; aspect-ratio:1/1; border-radius:50%; object-fit:cover;">
+<div class="hero-info">
+<h1 class="hero-name">Qianming Huang</h1>
+<div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
+<p class="hero-bio">Hello! I am a student at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests include <strong>robotics</strong> and <strong>machine learning</strong>.I am particularly interested in how robots can better understand and interact with complex real-world environments through perception, reinforcement learning, and vision-language-action models.</p>
+<div class="hero-badges">
+<span class="hero-badge">🎓 University of Pennsylvania</span>
+<span class="hero-badge">🤖 Robotics &amp; Machine Learning</span>
+<span class="hero-badge">📍 Beijing, China</span>
 </div>
-<p>Hello! My name is <strong>Qianming Huang（黄前铭, /tʃiɛn mɪŋ hwɑŋ/）</strong>, from Beijing, China. Now, I am studying at the University of Pennsylvania. My research interests include robotics and machine learning.</p>
-<h2 id="Education">Education</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p><strong>2021.09 - 2025.06;   China University of Geosciences, Beijing</strong></p>
-<p>Major : Computer Science and Technology</p>
-<p>Degree : Bachelor of Engineering</p>
-</li>
-</ul>
-<h2 id="Publications-Software-Copyright">Publications &amp; Software Copyright</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p><strong>Qianming Huang</strong>, Bowen Yao, Huarui Wu, Baolong Feng, Yeyuan Li, Zixuan Guo, Ling Bu. Machine Learning Assisted Three-dimensional Sparse Point Clouds Filling for Geological Spatial Modeling. <em>43rd Chinese Control Conference</em>. Paper ID: 0917, 2024.07.</p>
-<ul class="lvl-2">
-<li class="lvl-4">link: <a class="link"   target="_blank" rel="noopener" href="https://xploreqa.ieee.org/document/10661896" >Machine Learning Assisted Three-dimensional Sparse Point Clouds Filling for Geological Spatial Modeling | IEEE Conference Publication | IEEE Xplore<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-</li>
-<li class="lvl-2">
-<p><strong>Qianming Huang</strong>. Classification of Fruits Based on CNN, SVM, and PCA. <em>2023 Intl. Conference on Data Analysis and Machine Learning (DAML 2023)</em>. ML103, 2023.12.</p>
-<ul class="lvl-2">
-<li class="lvl-4">link: <a class="link"   target="_blank" rel="noopener" href="https://www.scitepress.org/Papers/2023/128150/128150.pdf" >128150.pdf<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-</li>
-<li class="lvl-2">
-<p>Qingzhao Li, Ling Bu, Shiyu Lu, Bowen Yao, <strong>Qianming Huang</strong>, Xiaohong Wang. Practical Asymmetry and Its Effects on Power and Bandwidth Performance in Bi-stab Vibration Energy Harvesters. <em>Mechanical Systems and Signal Processing</em>. MSSP23-2509, 2023.11.</p>
-<ul class="lvl-2">
-<li class="lvl-4">link: <a class="link"   target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/abs/pii/S0888327023008476" >Practical asymmetry and its effects on power and bandwidth performance in bi-stable vibration energy harvesters - ScienceDirect<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-</li>
-<li class="lvl-2">
-<p>Jiankun Guo, Bowen Yao, <strong>Qianming Huang</strong>, Ling Bu. High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter. <em>18th IEEE Conference on Industrial Electronics and Applications (ICIEA 2023)</em>. ICIEA23-000355, 2023.08.</p>
-<ul class="lvl-2">
-<li class="lvl-4">link: <a class="link"   target="_blank" rel="noopener" href="https://ieeexplore.ieee.org/abstract/document/10241876" >https://ieeexplore.ieee.org/abstract/document/10241876<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-</li>
-<li class="lvl-2">
-<p><strong>Qianming Huang</strong>, Ziyue Feng, Jiajun Xu. Intelligent Control Security Door Lock Based on Narrowband Cellular IOT Technology. 2024.02. No. 2024SR0289743. (Software Copyright)</p>
-</li>
-</ul>
-<h2 id="Skills">Skills</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>Proficient in Python, C++, C, Linux, Anaconda</p>
-</li>
-<li class="lvl-2">
-<p>Familiar with Pytorch, ROS, CUDA, OpenMP, Qt, MuJoCo</p>
-</li>
-</ul>
-<h2 id="Other-Information">Other Information</h2>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>Hobbies &amp; Interests: Swimming, Krav Maga, Boxing, Brazilian Jiu-Jitsu and Saxophone.</p>
-</li>
-</ul>
-
-                
-            </div>
-
-            <!-- comment plugin -->
-            
-        </div>
-    </div>
+<div class="hero-contacts">
+<a class="hero-contact" href="mailto:brad_huang@outlook.com">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+brad_huang@outlook.com
+</a>
+<a class="hero-contact" href="https://github.com/Huangqm1234" target="_blank" rel="noopener">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+GitHub
+</a>
 </div>
-
-
-                
-            </div>
-        </div>
-
-        <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="copyright-info info-item">
-    &copy;&nbsp;<span>2025</span>&nbsp;-&nbsp;2026
-    
-            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Qianming Huang</a>
-        
-    </div>
-
-    <div class="theme-info info-item">
-        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
-    </div>
-
-    
-
-    
-        <div class="count-info info-item">
-            
-
-            
-                <span class="count-item border-box uv">
-                    <span class="item-type border-box">Unique Visitor</span>
-                    <span class="item-value border-box uv" id="busuanzi_value_site_uv"></span>
-                </span>
-            
-
-            
-        </div>
-    
-
-    
+</div>
+</div>
+<section class="section">
+<div class="section-title">Education</div>
+<div class="edu-item">
+<div class="edu-period">2021.09 — 2025.06</div>
+<div>
+<div class="edu-school">China University of Geosciences, Beijing</div>
+<div class="edu-degree">B.Eng. &middot; Computer Science and Technology</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-title">Publications &amp; Software Copyright</div>
+<div class="pub-item">
+<div class="pub-num">[1]</div>
+<div>
+<div class="pub-title">Machine Learning Assisted Three-dimensional Sparse Point Clouds Filling for Geological Spatial Modeling</div>
+<div class="pub-authors"><strong>Qianming Huang</strong>, Bowen Yao, Huarui Wu, Baolong Feng, Yeyuan Li, Zixuan Guo, Ling Bu</div>
+<div class="pub-venue">43rd Chinese Control Conference &middot; 2024.07</div>
+<a class="link"  class="pub-link"  href="https://xploreqa.ieee.org/document/10661896"  target="_blank" rel="noopener">&#8599; IEEE Xplore<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="pub-item">
+<div class="pub-num">[2]</div>
+<div>
+<div class="pub-title">Classification of Fruits Based on CNN, SVM, and PCA</div>
+<div class="pub-authors"><strong>Qianming Huang</strong></div>
+<div class="pub-venue">2023 Intl. Conference on Data Analysis and Machine Learning (DAML 2023) &middot; 2023.12</div>
+<a class="link"  class="pub-link"  href="https://www.scitepress.org/Papers/2023/128150/128150.pdf"  target="_blank" rel="noopener">&#8599; PDF<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="pub-item">
+<div class="pub-num">[3]</div>
+<div>
+<div class="pub-title">Practical Asymmetry and Its Effects on Power and Bandwidth Performance in Bi-stable Vibration Energy Harvesters</div>
+<div class="pub-authors">Qingzhao Li, Ling Bu, Shiyu Lu, Bowen Yao, <strong>Qianming Huang</strong>, Xiaohong Wang</div>
+<div class="pub-venue">Mechanical Systems and Signal Processing &middot; 2023.11</div>
+<a class="link"  class="pub-link"  href="https://www.sciencedirect.com/science/article/abs/pii/S0888327023008476"  target="_blank" rel="noopener">&#8599; ScienceDirect<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="pub-item">
+<div class="pub-num">[4]</div>
+<div>
+<div class="pub-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
+<div class="pub-authors">Jiankun Guo, Bowen Yao, <strong>Qianming Huang</strong>, Ling Bu</div>
+<div class="pub-venue">18th IEEE Conference on Industrial Electronics and Applications (ICIEA 2023) &middot; 2023.08</div>
+<a class="link"  class="pub-link"  href="https://ieeexplore.ieee.org/abstract/document/10241876"  target="_blank" rel="noopener">&#8599; IEEE Xplore<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="pub-item">
+<div class="pub-num">[5]</div>
+<div>
+<div class="pub-title">Intelligent Control Security Door Lock Based on Narrowband Cellular IoT Technology</div>
+<div class="pub-authors"><strong>Qianming Huang</strong>, Ziyue Feng, Jiajun Xu</div>
+<div class="pub-venue">Software Copyright &middot; No. 2024SR0289743 &middot; 2024.02</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-title">Skills</div>
+<div class="skills-block">
+<div class="skills-label">Proficient</div>
+<div class="skill-tags">
+<span class="skill-tag">Python</span>
+<span class="skill-tag">C++</span>
+<span class="skill-tag">C</span>
+<span class="skill-tag">Linux</span>
+<span class="skill-tag">Anaconda</span>
+</div>
+<div class="skills-label">Familiar</div>
+<div class="skill-tags">
+<span class="skill-tag">PyTorch</span>
+<span class="skill-tag">ROS</span>
+<span class="skill-tag">CUDA</span>
+<span class="skill-tag">OpenMP</span>
+<span class="skill-tag">Qt</span>
+<span class="skill-tag">MuJoCo</span>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-title">Hobbies &amp; Interests</div>
+<div class="interest-tags">
+<span class="interest-tag">🏊 Swimming</span>
+<span class="interest-tag">🥊 Krav Maga</span>
+<span class="interest-tag">🥊 Boxing</span>
+<span class="interest-tag">🤼 Brazilian Jiu-Jitsu</span>
+<span class="interest-tag">🎷 Saxophone</span>
+</div>
+</section>
+<footer class="page-footer">
+&copy; 2026 Qianming Huang &middot; Powered by <a class="link"   href="https://hexo.io"  target="_blank" rel="noopener">Hexo<i class="fas fa-external-link-alt"></i></a>
 </footer>
-
-        </div>
-    </div>
-
-    <!-- post tools -->
-    
-
-    <!-- side tools -->
-    <div class="side-tools">
-        <div class="side-tools-container border-box ">
-    <ul class="side-tools-list side-tools-show-handle border-box">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <!-- toggle mode -->
-        
-            <li class="tools-item tool-toggle-theme-mode flex-center">
-                <i class="fas fa-moon"></i>
-            </li>
-        
-
-        <!-- rss -->
-        
-
-        <!-- to bottom -->
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list border-box">
-        
-
-        
-
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-
-        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
-            <i class="arrow fas fa-arrow-up"></i>
-            <span class="percent"></span>
-        </li>
-    </ul>
-</div>
-
-    </div>
-
-    <!-- image mask -->
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
-</div>
-
-
-    <!-- local search -->
-    
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="Search..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="close-popup-btn">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-
-    <!-- tablet toc -->
-    
 </main>
-
-
-
-
-
-<!-- common js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/anime.min.js"></script>
-
-<!-- local search -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/local-search.min.js"></script>
-
-
-<!-- lazyload -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/lazyload.min.js"></script>
-
-
-<div class="pjax">
-    <!-- home page -->
-    
-
-    <!-- post page -->
-    
-
-    <!-- categories page -->
-    
-
-    <!-- links page -->
-    
-
-    <!-- photos page -->
-    
-
-    <!-- tools page -->
-    
-</div>
-
-<!-- mermaid -->
-
-    
-<script src="//cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js"></script>
-
-    <script data-pjax>
-      if (window.mermaid) {
-        mermaid.init()
-      }
-    </script>
-
-
-
-
-
-
-<!-- pjax -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/libs/pjax.min.js"></script>
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        window.pjax = new Pjax({
-            selectors: [
-                'head title',
-                '.page-container',
-                '.pjax'
-            ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart()
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd()
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
-            KEEP.initExecute()
-        });
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('img[data-src]').forEach(function(img) {
+    img.src = img.getAttribute('data-src');
+  });
+});
 </script>
-
-
-
-
-    
-        
-    
-
 </body>
 </html>
