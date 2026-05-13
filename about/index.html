@@ -10,6 +10,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Ne
 a { color: #1565c0; text-decoration: none; }
 a:hover { text-decoration: underline; }
 /* ---- Nav ---- */
+html { scroll-behavior: smooth; }
 .site-nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e8ec; padding: 0 44px; display: flex; align-items: center; height: 54px; }
 .site-nav-brand { font-weight: 700; color: #1c1c2e; font-size: 0.95rem; margin-right: auto; letter-spacing: 0.01em; }
 .site-nav-brand a { color: inherit; }
@@ -33,7 +34,7 @@ a:hover { text-decoration: underline; }
 .hero-contact { display: inline-flex; align-items: center; gap: 5px; color: #555; font-size: 0.86rem; transition: color 0.15s; }
 .hero-contact:hover { color: #1565c0; text-decoration: none; }
 /* ---- Section ---- */
-.section { margin-bottom: 52px; }
+.section { margin-bottom: 52px; scroll-margin-top: 70px; }
 .section-title { font-size: 1.05rem; font-weight: 700; color: #1c1c2e; padding-bottom: 10px; border-bottom: 2px solid #1565c0; margin-bottom: 24px; display: inline-block; letter-spacing: 0.01em; }
 /* ---- Education ---- */
 .edu-item { display: flex; gap: 24px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid #f0f0f4; }
@@ -51,6 +52,15 @@ a:hover { text-decoration: underline; }
 .pub-venue { color: #888; font-style: italic; font-size: 0.82rem; margin-bottom: 9px; }
 .pub-link { display: inline-flex; align-items: center; gap: 3px; background: #eef3fc; border: 1px solid #c6d6f0; color: #1565c0; border-radius: 4px; padding: 2px 10px; font-size: 0.78rem; text-decoration: none; transition: background 0.15s; }
 .pub-link:hover { background: #d6e5f8; text-decoration: none; }
+/* ---- Projects ---- */
+.proj-item { display: flex; gap: 24px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #f0f0f4; }
+.proj-item:last-child { border-bottom: none; }
+.proj-period { flex-shrink: 0; width: 148px; color: #999; font-size: 0.81rem; padding-top: 3px; font-variant-numeric: tabular-nums; }
+.proj-title { font-weight: 600; color: #1c1c2e; font-size: 0.95rem; margin-bottom: 4px; }
+.proj-role { color: #666; font-size: 0.84rem; margin-bottom: 8px; }
+.proj-desc { color: #444; font-size: 0.86rem; line-height: 1.65; padding-left: 18px; margin: 0; }
+.proj-desc li { margin-bottom: 3px; }
+.proj-desc li:last-child { margin-bottom: 0; }
 /* ---- Skills ---- */
 .skills-block { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; align-items: start; }
 .skills-label { color: #999; font-size: 0.81rem; font-weight: 500; padding-top: 5px; }
@@ -66,8 +76,8 @@ a:hover { text-decoration: underline; }
 @media (max-width: 580px) {
   .hero { flex-direction: column; gap: 24px; align-items: center; text-align: center; }
   .hero-badges, .hero-contacts { justify-content: center; }
-  .edu-item { flex-direction: column; gap: 4px; }
-  .edu-period { width: auto; }
+  .edu-item, .proj-item { flex-direction: column; gap: 4px; }
+  .edu-period, .proj-period { width: auto; }
   .skills-block { grid-template-columns: 1fr; }
   .site-nav { padding: 0 18px; }
   .page { padding: 40px 18px 64px; }
@@ -77,12 +87,13 @@ a:hover { text-decoration: underline; }
 </head>
 <body>
 <nav class="site-nav">
-<span class="site-nav-brand"><a href="/">Qianming&#39;s Blog</a></span>
+<span class="site-nav-brand"><a href="/">Qianming Huang</a></span>
 <ul class="site-nav-links">
-<li><a href="/">Home</a></li>
-<li><a href="/archives">Archives</a></li>
-<li><a href="/categories">Categories</a></li>
-<li><a href="/about" class="active">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
 </ul>
 </nav>
 <main class="page">
@@ -115,7 +126,7 @@ GitHub
 </div>
 </div>
 </div>
-<section class="section">
+<section class="section" id="education">
 <div class="section-title">Education</div>
 <div class="edu-item">
 <div class="edu-period">2021.09 — 2025.06</div>
@@ -125,10 +136,18 @@ GitHub
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section" id="publications">
 <div class="section-title">Publications &amp; Software Copyright</div>
 <div class="pub-item">
 <div class="pub-num">[1]</div>
+<div>
+<div class="pub-title">Real-time Position and Orientation Estimation in Dual Self-Propelled Swimmers Using Artificial Lateral Line Systems with Intermittent Swimming Strategy</div>
+<div class="pub-authors">Ruosi Liu*, Yufan Zhai*, <strong>Qianming Huang</strong>, Zhenyu Ding, Yang Ding, Guangming Xie</div>
+<div class="pub-venue">International Journal of Robotics Research (IJRR) &middot; Accepted, 2026 &middot; <span style="font-size: 0.78rem;">* Co-first authors</span></div>
+</div>
+</div>
+<div class="pub-item">
+<div class="pub-num">[2]</div>
 <div>
 <div class="pub-title">Machine Learning Assisted Three-dimensional Sparse Point Clouds Filling for Geological Spatial Modeling</div>
 <div class="pub-authors"><strong>Qianming Huang</strong>, Bowen Yao, Huarui Wu, Baolong Feng, Yeyuan Li, Zixuan Guo, Ling Bu</div>
@@ -137,7 +156,7 @@ GitHub
 </div>
 </div>
 <div class="pub-item">
-<div class="pub-num">[2]</div>
+<div class="pub-num">[3]</div>
 <div>
 <div class="pub-title">Classification of Fruits Based on CNN, SVM, and PCA</div>
 <div class="pub-authors"><strong>Qianming Huang</strong></div>
@@ -146,7 +165,7 @@ GitHub
 </div>
 </div>
 <div class="pub-item">
-<div class="pub-num">[3]</div>
+<div class="pub-num">[4]</div>
 <div>
 <div class="pub-title">Practical Asymmetry and Its Effects on Power and Bandwidth Performance in Bi-stable Vibration Energy Harvesters</div>
 <div class="pub-authors">Qingzhao Li, Ling Bu, Shiyu Lu, Bowen Yao, <strong>Qianming Huang</strong>, Xiaohong Wang</div>
@@ -155,7 +174,7 @@ GitHub
 </div>
 </div>
 <div class="pub-item">
-<div class="pub-num">[4]</div>
+<div class="pub-num">[5]</div>
 <div>
 <div class="pub-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
 <div class="pub-authors">Jiankun Guo, Bowen Yao, <strong>Qianming Huang</strong>, Ling Bu</div>
@@ -164,7 +183,7 @@ GitHub
 </div>
 </div>
 <div class="pub-item">
-<div class="pub-num">[5]</div>
+<div class="pub-num">[6]</div>
 <div>
 <div class="pub-title">Intelligent Control Security Door Lock Based on Narrowband Cellular IoT Technology</div>
 <div class="pub-authors"><strong>Qianming Huang</strong>, Ziyue Feng, Jiajun Xu</div>
@@ -172,7 +191,46 @@ GitHub
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section" id="projects">
+<div class="section-title">Projects</div>
+<div class="proj-item">
+<div class="proj-period">2022.12 — 2024.03</div>
+<div>
+<div class="proj-title">Flexible Exploring Robot Implementation</div>
+<div class="proj-role">Team Leader (5 members) &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
+<ul class="proj-desc">
+<li>Led a five-person team to design a robot for exploring confined spaces (caves, pipes) with 3D modeling.</li>
+<li>Designed sparse point cloud completion algorithms based on Polynomial Regression, SVR, and Newton Interpolation.</li>
+<li>Accelerated the pipeline on low-performance platforms via parallel computing.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2023.06 — 2024.05</div>
+<div>
+<div class="proj-title">Bird Expulsion System Implementation</div>
+<div class="proj-role">Member &middot; Mentor: Asst. Prof. Shan Ye &amp; Zhenhua Wang, CUG (Beijing)</div>
+<ul class="proj-desc">
+<li>Built an embedded Raspberry Pi system to detect, track, and expel birds with species-specific mechanisms.</li>
+<li>Modified YOLOv5 with an alpha-IoU bounding-box loss, an extra segmentation head, and additional feature layers.</li>
+<li>Designed a distributed GPU-host + Pi architecture for efficient real-time detection and tracking.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2023.07 — 2023.11</div>
+<div>
+<div class="proj-title">Image Recognition of Fruits and Vegetables</div>
+<div class="proj-role">Team Leader (5 members) &middot; Mentor: Prof. Mark Vogelsberger, MIT</div>
+<ul class="proj-desc">
+<li>Led a five-person team to compare CNN and SVM solutions for fruit / vegetable image recognition.</li>
+<li>Produced a report on algorithmic foundations (SVM, PCA, etc.) and benchmarked across methods.</li>
+<li>Deployed the recognition models on a Raspberry Pi for real-world inference.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="skills">
 <div class="section-title">Skills</div>
 <div class="skills-block">
 <div class="skills-label">Proficient</div>
@@ -194,7 +252,7 @@ GitHub
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section" id="hobbies">
 <div class="section-title">Hobbies &amp; Interests</div>
 <div class="interest-tags">
 <span class="interest-tag">🏊 Swimming</span>
