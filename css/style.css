@@ -3980,7 +3980,7 @@ figure.highlight .shrink-line:hover::before {
   display: block;
 }
 .post-page-container.show-toc .post-content-container {
-  width: calc(100% - 15rem);
+  width: calc(100% - 20rem);
 }
 .post-page-container.encrypt .post-aging-tips {
   display: none !important;
@@ -4364,7 +4364,7 @@ figure.highlight .shrink-line:hover::before {
   display: none;
   flex-shrink: 0;
   box-sizing: border-box;
-  width: 15rem;
+  width: 20rem;
   max-height: calc(100vh - calc(var(--header-height) + var(--component-gap)));
   transition-delay: 0s, 0s, 0s, 0s, 0s, 0s, 0s;
   transition-timing-function: ease, ease, ease, ease, ease, ease, ease;
