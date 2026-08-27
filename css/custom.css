@@ -36,3 +36,39 @@
 :root {
   --first-screen-font-color-dark: #003366;
 }
+
+/* ============================================================
+   长公式横向滚动（Typora 风格）
+   公式超出正文宽度时，公式块底部出现横向滚动条；
+   宽度足够时公式保持居中，样式与之前一致。
+   ============================================================ */
+mjx-container[jax="SVG"][display="true"] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 0.2rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
+}
+
+/* 宽度足够时居中；超宽时自动左对齐，由容器滚动 */
+mjx-container[jax="SVG"][display="true"] > svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* WebKit 内核滚动条样式 */
+mjx-container[jax="SVG"][display="true"]::-webkit-scrollbar {
+  height: 6px;
+}
+mjx-container[jax="SVG"][display="true"]::-webkit-scrollbar-track {
+  background: transparent;
+}
+mjx-container[jax="SVG"][display="true"]::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.4);
+  border-radius: 3px;
+}
+mjx-container[jax="SVG"][display="true"]::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.6);
+}
