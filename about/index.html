@@ -69,6 +69,10 @@ html { scroll-behavior: smooth; }
 .proj-desc { color: #444; font-size: 0.86rem; line-height: 1.65; padding-left: 18px; margin: 0; }
 .proj-desc li { margin-bottom: 3px; }
 .proj-desc li:last-child { margin-bottom: 0; }
+.proj-item > div:last-child { min-width: 0; }
+.proj-demo { margin-top: 16px; }
+.proj-demo video { display: block; width: 100%; height: auto; border: 1px solid #e5e8ec; border-radius: 8px; background: #000; }
+.proj-demo figcaption { margin-top: 7px; color: #888; font-size: 0.8rem; }
 /* ---- Skills ---- */
 .skills-block { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; align-items: start; }
 .skills-label { color: #999; font-size: 0.81rem; font-weight: 500; padding-top: 5px; }
@@ -291,6 +295,13 @@ GitHub
 <li>Developed a motion prediction algorithm to track bird movements.</li>
 <li>Designed a distributed GPU-host + Pi architecture for efficient real-time detection and tracking.</li>
 </ul>
+<figure class="proj-demo">
+<video controls playsinline preload="metadata" aria-label="Bird Expulsion System demonstration">
+<source src="/videos/bird-expulsion-demo.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="/videos/bird-expulsion-demo.mp4">Download the demo video</a>.
+</video>
+<figcaption>Bird Expulsion System — Demo Video</figcaption>
+</figure>
 </div>
 </div>
 <div class="proj-item">
