@@ -15,7 +15,7 @@ html { scroll-behavior: smooth; }
 .site-nav-brand { font-weight: 700; color: #1c1c2e; font-size: 0.95rem; margin-right: auto; letter-spacing: 0.01em; white-space: nowrap; }
 .site-nav-brand a { color: inherit; }
 .site-nav-brand a:hover { text-decoration: none; opacity: 0.75; }
-.site-nav-links { display: flex; gap: 30px; list-style: none; }
+.site-nav-links { display: flex; gap: 22px; list-style: none; }
 .site-nav-links a { color: #555; font-size: 0.875rem; font-weight: 500; transition: color 0.15s; }
 .site-nav-links a:hover, .site-nav-links a.active { color: #1565c0; text-decoration: none; }
 .nav-toggle { display: none; background: none; border: none; padding: 6px; margin: 0; cursor: pointer; color: #1c1c2e; line-height: 0; border-radius: 4px; transition: background 0.15s; }
@@ -81,7 +81,7 @@ html { scroll-behavior: smooth; }
 .page-footer { text-align: center; color: #bbb; font-size: 0.79rem; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f0f0f4; }
 .page-footer a { color: #aaa; }
 /* ---- Responsive ---- */
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .nav-toggle { display: inline-flex; }
   .site-nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e8ec; padding: 6px 18px 12px; display: none; box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
   .site-nav-links.open { display: flex; }
@@ -110,8 +110,11 @@ html { scroll-behavior: smooth; }
 </button>
 <ul class="site-nav-links" id="nav-links">
 <li><a href="#education">Education</a></li>
+<li><a href="#research">Research</a></li>
 <li><a href="#publications">Publications</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#awards">Awards</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#hobbies">Hobbies</a></li>
 <li><a href="/">Blog</a></li>
@@ -129,16 +132,16 @@ html { scroll-behavior: smooth; }
 </div>
 <div class="hero-info">
 <h1 class="hero-name">Qianming Huang</h1>
-<div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
-<p class="hero-bio">Hello! I am a master student at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests include <strong>robotics</strong> and <strong>machine learning</strong>. I am particularly interested in how robots can better understand and interact with complex real-world environments.</p>
+<div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /&#712;t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
+<p class="hero-bio">Hello! I am a master's student in <strong>Electrical Engineering</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests include <strong>robotics</strong> and <strong>machine learning</strong>. I am particularly interested in how robots can better understand and interact with complex real-world environments.</p>
 <div class="hero-badges">
 <span class="hero-badge">🏛️ University of Pennsylvania</span>
 <span class="hero-badge">🤖 Robotics &amp; Machine Learning</span>
 </div>
 <div class="hero-contacts">
-<a class="hero-contact" href="mailto:brad.hqm@gmail.com">
+<a class="hero-contact" href="mailto:huangqm@seas.upenn.edu">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-brad.hqm@gmail.com
+huangqm@seas.upenn.edu
 </a>
 <a class="hero-contact" href="https://github.com/Huangqm1234" target="_blank" rel="noopener">
 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -151,10 +154,45 @@ GitHub
 <section class="section" id="education">
 <div class="section-title">Education</div>
 <div class="edu-item">
-<div class="edu-period">2021.09 — 2025.06</div>
+<div class="edu-period">2025.08 — Present</div>
+<div>
+<div class="edu-school">University of Pennsylvania</div>
+<div class="edu-degree">M.S. &middot; Electrical Engineering &middot; GPA: 4.0/4.0</div>
+</div>
+</div>
+<div class="edu-item">
+<div class="edu-period">2021.09 — 2025.07</div>
 <div>
 <div class="edu-school">China University of Geosciences, Beijing</div>
-<div class="edu-degree">B.Eng. &middot; Computer Science and Technology</div>
+<div class="edu-degree">B.Eng. &middot; Computer Science and Technology &middot; GPA: 3.83/4.0</div>
+</div>
+</div>
+</section>
+<section class="section" id="research">
+<div class="section-title">Research Experience</div>
+<div class="proj-item">
+<div class="proj-period">2024.07 — 2026.01</div>
+<div>
+<div class="proj-title">Robot Control Lab, Tsinghua University</div>
+<div class="proj-role">Research Assistant &middot; Mentor: Prof. Mingguo Zhao &middot; On-site → remote</div>
+<ul class="proj-desc">
+<li>Implemented multimodal fusion perception for robotic arms using attention mechanisms and imitation learning for multiple tasks.</li>
+<li>Developed attention visualization algorithms and imitation learning data acquisition systems.</li>
+<li>Studied brain-inspired control, wrote a review of spiking neural networks, and explored reinforcement learning for legged robot control.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2024.06 — 2025.07</div>
+<div>
+<div class="proj-title">Intelligent Biomimetic Design Lab, Peking University</div>
+<div class="proj-role">Research Assistant &middot; Mentor: Prof. Guangming Xie</div>
+<ul class="proj-desc">
+<li>Designed an LSTM-based spatial perception algorithm using artificial lateral line sensor data for real-time position sensing in underwater robotic fish.</li>
+<li>Developed a global vision-based trajectory tracking algorithm using MMTracking to analyze robotic fish swimming trajectories.</li>
+<li>Contributed to embedded hardware and software integration and maintenance of robotic fish systems.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://en.ibdl.pku.edu.cn/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
 </section>
@@ -165,7 +203,7 @@ GitHub
 <div>
 <div class="pub-title">Real-time Position and Orientation Estimation in Dual Self-Propelled Swimmers Using Artificial Lateral Line Systems with Intermittent Swimming Strategy</div>
 <div class="pub-authors">Ruosi Liu*, Yufan Zhai*, <strong>Qianming Huang</strong>, Zhenyu Ding, Yang Ding, Guangming Xie</div>
-<div class="pub-venue">International Journal of Robotics Research (IJRR) &middot; Accepted, 2026 &middot; <span style="font-size: 0.78rem;">* Co-first authors</span></div>
+<div class="pub-venue">International Journal of Robotics Research (IJRR) &middot; Accepted, 2026 &middot; <span style="font-size: 0.78rem;">* Equal contribution</span></div>
 <a class="link"  class="pub-link"  href="https://journals.sagepub.com/doi/epub/10.1177/02783649261442970"  target="_blank" rel="noopener">&#8599; SAGE Journals<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
@@ -238,6 +276,7 @@ GitHub
 <li>Led a five-person team to design a robot for exploring confined spaces (caves, pipes) with 3D modeling.</li>
 <li>Designed sparse point cloud completion algorithms based on Polynomial Regression, SVR, and Newton Interpolation.</li>
 <li>Accelerated the pipeline on low-performance platforms via parallel computing.</li>
+<li>Contributed to the robot's detection and sensor systems.</li>
 </ul>
 </div>
 </div>
@@ -249,6 +288,7 @@ GitHub
 <ul class="proj-desc">
 <li>Built an embedded Raspberry Pi system to detect, track, and expel birds with species-specific mechanisms.</li>
 <li>Modified YOLOv5 with an alpha-IoU bounding-box loss, an extra segmentation head, and additional feature layers.</li>
+<li>Developed a motion prediction algorithm to track bird movements.</li>
 <li>Designed a distributed GPU-host + Pi architecture for efficient real-time detection and tracking.</li>
 </ul>
 </div>
@@ -265,6 +305,112 @@ GitHub
 </ul>
 </div>
 </div>
+<div class="proj-item">
+<div class="proj-period">2023.04 — 2023.12</div>
+<div>
+<div class="proj-title">Intelligent-Controlled Security Door Lock Based on Narrowband Cellular IoT</div>
+<div class="proj-role">Member</div>
+<ul class="proj-desc">
+<li>Integrated hardware and software for Python-based NB-IoT door lock control and optimized information transmission for security and reliability.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2022.03 — 2023.05</div>
+<div>
+<div class="proj-title">Practical Asymmetry in Bi-stable Vibration Energy Harvesters</div>
+<div class="proj-role">Member &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
+<ul class="proj-desc">
+<li>Processed experimental data and built mathematical models in Python to analyze power and bandwidth performance.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2022.06 — 2023.02</div>
+<div>
+<div class="proj-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
+<div class="proj-role">Member &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
+<ul class="proj-desc">
+<li>Processed and visualized experimental data using Python.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="experience">
+<div class="section-title">Industry Experience</div>
+<div class="proj-item">
+<div class="proj-period">2023.12 — 2024.01<br>2024.03 — 2024.06</div>
+<div>
+<div class="proj-title">Sinopharm Digital Technology (Beijing) Co., Ltd.</div>
+<div class="proj-role">Part-time Data Analyst</div>
+<ul class="proj-desc">
+<li>Contributed to the Big Data Control Platform Implementation Project for Sinopharm Group.</li>
+<li>Helped deploy ERNIE-layout to recognize table images and organize extracted table and seal information into Excel.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section" id="awards">
+<div class="section-title">Awards &amp; Leadership</div>
+<div class="proj-item">
+<div class="proj-period">2023.08</div>
+<div>
+<div class="proj-title">National Second Prize · RAICOM Robot Developer Competition</div>
+<div class="proj-role">Team Leader &middot; National Championship</div>
+<ul class="proj-desc">
+<li>Developed a shooting algorithm based on robot dynamics and geometry, improving the success rate from 82% to 95%.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://github.com/Huangqm1234/RaiComRecord"  target="_blank" rel="noopener">&#8599; Code<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2023.07</div>
+<div>
+<div class="proj-title">National Third Prize · RoboCup Football Robot, Small Size Group</div>
+<div class="proj-role">Team Leader &amp; Core Developer</div>
+<ul class="proj-desc">
+<li>Developed the university's first complete competition code in C++ and Lua, including field and robot testing code.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://github.com/Huangqm1234/RoboCup_CUGB_2023"  target="_blank" rel="noopener">&#8599; Code<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2022 — 2023</div>
+<div>
+<div class="proj-title">Additional Competition Awards</div>
+<div class="proj-role">Robotics &amp; Computing</div>
+<ul class="proj-desc">
+<li>Huawei ICT 2023–2024 Beijing Practice Competition, Computing Track (Undergraduate): Third Prize (2023.11).</li>
+<li>RAICOM Robot Developer Competition, Beijing Area: Second Prize (2023.07), as team leader.</li>
+<li>25th China Robot and Artificial Intelligence Competition, Beijing Robot Competition: Third Prize in both Simuro Football and iLoboke Football (2023.05).</li>
+<li>13th International Humanoid Robot Olympic Competition: Honorable Mention in both Simulation Robot Football and SimuroSot Penalty Shootout (2022.12), as team leader.</li>
+<li>RoboCom Robot Developer Competition, CAIP Engineering Competition: Second Prize in the National Football Final (2022.11) and First Prize in the Beijing Football Final (2022.10).</li>
+<li>24th China Robot and Artificial Intelligence Competition, Beijing Division: Third Prize in iLoboke Football (2022.07), as team leader.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2021 — 2024</div>
+<div>
+<div class="proj-title">Academic Scholarships</div>
+<div class="proj-role">China University of Geosciences (Beijing)</div>
+<ul class="proj-desc">
+<li>First-class Professional Scholarship: first term of 2023–2024.</li>
+<li>Second-class Professional Scholarship: first term of 2021–2022, second term of 2022–2023, and second term of 2023–2024.</li>
+<li>Third-class Professional Scholarship and Academic Progress Scholarship: first term of 2022–2023.</li>
+</ul>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2022.12 — 2023.12</div>
+<div>
+<div class="proj-title">University Soccer Robot Team</div>
+<div class="proj-role">Captain</div>
+<ul class="proj-desc">
+<li>Led the university soccer robot team.</li>
+</ul>
+</div>
+</div>
 </section>
 <section class="section" id="skills">
 <div class="section-title">Skills</div>
@@ -275,6 +421,9 @@ GitHub
 <span class="skill-tag">C++</span>
 <span class="skill-tag">C</span>
 <span class="skill-tag">Linux</span>
+<span class="skill-tag">Anaconda</span>
+<span class="skill-tag">Jupyter Notebook</span>
+<span class="skill-tag">Raspberry Pi</span>
 </div>
 <div class="skills-label">Familiar</div>
 <div class="skill-tags">
@@ -284,7 +433,14 @@ GitHub
 <span class="skill-tag">OpenMP</span>
 <span class="skill-tag">Qt</span>
 <span class="skill-tag">MuJoCo</span>
+<span class="skill-tag">Lua</span>
+<span class="skill-tag">Onshape</span>
+<span class="skill-tag">Isaac Gym</span>
+<span class="skill-tag">OpenCV</span>
+<span class="skill-tag">OpenGL</span>
 </div>
+<div class="skills-label">Certificate</div>
+<div class="skill-tags"><span class="skill-tag">Huawei HCIA (OpenEuler)</span></div>
 </div>
 </section>
 <section class="section" id="hobbies">
