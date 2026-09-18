@@ -73,6 +73,11 @@ html { scroll-behavior: smooth; }
 .proj-demo { margin-top: 16px; }
 .proj-demo video { display: block; width: 100%; height: auto; border: 1px solid #e5e8ec; border-radius: 8px; background: #000; }
 .proj-demo figcaption { margin-top: 7px; color: #888; font-size: 0.8rem; }
+.proj-demo--compact { width: 60%; }
+.proj-desc .proj-demo { margin: 12px 0 16px; }
+.proj-demo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 12px 0 16px; }
+.proj-demo-pair img { display: block; width: 100%; height: auto; border: 1px solid #e5e8ec; border-radius: 8px; }
+.proj-demo iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; }
 /* ---- Skills ---- */
 .skills-block { display: grid; grid-template-columns: 110px 1fr; gap: 14px 20px; align-items: start; }
 .skills-label { color: #999; font-size: 0.81rem; font-weight: 500; padding-top: 5px; }
@@ -180,9 +185,31 @@ GitHub
 <div class="proj-title">Robot Control Lab, Tsinghua University</div>
 <div class="proj-role">Research Assistant &middot; Mentor: Prof. Mingguo Zhao &middot; On-site → remote</div>
 <ul class="proj-desc">
-<li>Implemented multimodal fusion perception for robotic arms using attention mechanisms and imitation learning for multiple tasks.</li>
+<li>Implemented multimodal fusion perception for robotic arms using attention mechanisms and imitation learning for multiple tasks.
+<figure class="proj-demo">
+<video controls playsinline preload="metadata" aria-label="Robotic arm demonstration">
+<source src="/videos/robotic-arm-demo.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="/videos/robotic-arm-demo.mp4">Download the demo video</a>.
+</video>
+</figure>
+</li>
 <li>Developed attention visualization algorithms and imitation learning data acquisition systems.</li>
-<li>Studied brain-inspired control, wrote a review of spiking neural networks, and explored reinforcement learning for legged robot control.</li>
+<li>Studied brain-inspired control, wrote a review of spiking neural networks, and explored reinforcement learning for legged robot control.
+<div class="proj-demo-pair">
+<img    
+                       lazyload
+                       alt="image"
+                       data-src="/images/research/legged-robot-nov-5.gif"
+                         alt="Legged robot demonstration, November 5" loading="lazy"
+                 >
+<img    
+                       lazyload
+                       alt="image"
+                       data-src="/images/research/legged-robot-nov-3.gif"
+                         alt="Legged robot demonstration, November 3" loading="lazy"
+                 >
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -193,7 +220,14 @@ GitHub
 <div class="proj-role">Research Assistant &middot; Mentor: Prof. Guangming Xie</div>
 <ul class="proj-desc">
 <li>Designed an LSTM-based spatial perception algorithm using artificial lateral line sensor data for real-time position sensing in underwater robotic fish.</li>
-<li>Developed a global vision-based trajectory tracking algorithm using MMTracking to analyze robotic fish swimming trajectories.</li>
+<li>Developed a global vision-based trajectory tracking algorithm using MMTracking to analyze robotic fish swimming trajectories.
+<figure class="proj-demo">
+<video controls playsinline preload="metadata" aria-label="Robotic fish trajectory tracking demonstration">
+<source src="/videos/robotic-fish-tracking-demo.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="/videos/robotic-fish-tracking-demo.mp4">Download the demo video</a>.
+</video>
+</figure>
+</li>
 <li>Contributed to embedded hardware and software integration and maintenance of robotic fish systems.</li>
 </ul>
 <a class="link"  class="pub-link"  href="https://en.ibdl.pku.edu.cn/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
@@ -268,7 +302,10 @@ GitHub
 <li>Built a CNN–Transformer hybrid (ViT-style) architecture for image-to-GPS regression, reaching ~27 m RMSE.</li>
 <li>Developed attention visualization methods to analyze model behavior, improving RMSE from ~32 m to ~27 m.</li>
 </ul>
-<a class="link"  class="pub-link"  href="https://www.youtube.com/watch?v=fg0Z0NKGIHI"  target="_blank" rel="noopener" style="margin-left: 18px;">&#8599; Demo Video<i class="fas fa-external-link-alt"></i></a>
+<figure class="proj-demo">
+<iframe src="https://www.youtube-nocookie.com/embed/fg0Z0NKGIHI" title="Img2GPS Demo Video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<figcaption>Img2GPS — Demo Video &middot; <a class="link"   href="https://www.youtube.com/watch?v=fg0Z0NKGIHI"  target="_blank" rel="noopener">Watch on YouTube<i class="fas fa-external-link-alt"></i></a></figcaption>
+</figure>
 </div>
 </div>
 <div class="proj-item">
@@ -295,7 +332,7 @@ GitHub
 <li>Developed a motion prediction algorithm to track bird movements.</li>
 <li>Designed a distributed GPU-host + Pi architecture for efficient real-time detection and tracking.</li>
 </ul>
-<figure class="proj-demo">
+<figure class="proj-demo proj-demo--compact">
 <video controls playsinline preload="metadata" aria-label="Bird Expulsion System demonstration">
 <source src="/videos/bird-expulsion-demo.mp4" type="video/mp4">
 Your browser does not support embedded video. <a href="/videos/bird-expulsion-demo.mp4">Download the demo video</a>.
