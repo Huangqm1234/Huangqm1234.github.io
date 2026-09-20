@@ -6,11 +6,11 @@
 <title>Qianming Huang</title>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 15px; line-height: 1.65; color: #1c1c2e; background: #fff; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-size: 1rem; line-height: 1.65; color: #1c1c2e; background: #fff; }
 a { color: #1565c0; text-decoration: none; }
 a:hover { text-decoration: underline; }
 /* ---- Nav ---- */
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 18px; }
 .site-nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid #e5e8ec; padding: 0 44px; display: flex; align-items: center; height: 54px; }
 .site-nav-brand { font-weight: 700; color: #1c1c2e; font-size: 0.95rem; margin-right: auto; letter-spacing: 0.01em; white-space: nowrap; }
 .site-nav-brand a { color: inherit; }
@@ -25,12 +25,12 @@ html { scroll-behavior: smooth; }
 .nav-toggle.open .icon-open { display: none; }
 .nav-toggle.open .icon-close { display: block; }
 /* ---- Page ---- */
-.page { max-width: 860px; margin: 0 auto; padding: 60px 28px 88px; }
+.page { max-width: 940px; margin: 0 auto; padding: 60px 28px 88px; overflow-wrap: break-word; }
 /* ---- Hero ---- */
 .hero { display: flex; gap: 48px; align-items: flex-start; margin-bottom: 60px; }
 .hero-photo { flex-shrink: 0; }
 .hero-photo img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; display: block; border: 3px solid #e5e8ec; box-shadow: 0 3px 16px rgba(0,0,0,0.09); }
-.hero-info { flex: 1; padding-top: 4px; }
+.hero-info { flex: 1; min-width: 0; padding-top: 4px; }
 .hero-name { font-size: 1.95rem; font-weight: 700; color: #1c1c2e; line-height: 1.2; margin-bottom: 5px; }
 .hero-phonetic { color: #999; font-size: 0.87rem; margin-bottom: 16px; letter-spacing: 0.01em; }
 .hero-bio { color: #333; font-size: 0.95rem; line-height: 1.75; margin-bottom: 18px; }
@@ -90,7 +90,7 @@ html { scroll-behavior: smooth; }
 .page-footer { text-align: center; color: #bbb; font-size: 0.79rem; margin-top: 64px; padding-top: 24px; border-top: 1px solid #f0f0f4; }
 .page-footer a { color: #aaa; }
 /* ---- Responsive ---- */
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   .nav-toggle { display: inline-flex; }
   .site-nav-links { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: rgba(255,255,255,0.98); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e8ec; padding: 6px 18px 12px; display: none; box-shadow: 0 6px 16px rgba(0,0,0,0.06); }
   .site-nav-links.open { display: flex; }
@@ -99,6 +99,7 @@ html { scroll-behavior: smooth; }
   .site-nav-links li:last-child a { border-bottom: none; }
 }
 @media (max-width: 580px) {
+  html { font-size: 17px; }
   .hero { flex-direction: column; gap: 24px; align-items: center; text-align: center; }
   .hero-badges, .hero-contacts { justify-content: center; }
   .edu-item, .proj-item { flex-direction: column; gap: 4px; }
@@ -142,7 +143,7 @@ html { scroll-behavior: smooth; }
 <div class="hero-info">
 <h1 class="hero-name">Qianming Huang</h1>
 <div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /&#712;t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
-<p class="hero-bio">Hello! I am a master's student in <strong>Electrical Engineering</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests include <strong>robotics</strong> and <strong>machine learning</strong>. I am particularly interested in how robots can better understand and interact with complex real-world environments.</p>
+<p class="hero-bio">Hello! I am a master's student in <strong>Electrical Engineering (Robotics Concentration)</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. I work with <strong>Dr. Daniel Gehrig at GRASP Lab</strong> on delay-aware reinforcement learning for real-time robot control, and with <strong>Prof. Eric Eaton in the Lifelong Machine Learning group</strong> on vision-language-action (VLA) models. My research interests include <strong>robot learning</strong>, <strong>multimodal perception</strong>, and <strong>reliable autonomous decision-making</strong>.</p>
 <div class="hero-badges">
 <span class="hero-badge">🏛️ University of Pennsylvania</span>
 <span class="hero-badge">🤖 Robotics &amp; Machine Learning</span>
@@ -180,10 +181,34 @@ GitHub
 <section class="section" id="research">
 <div class="section-title">Research Experience</div>
 <div class="proj-item">
+<div class="proj-period">2026.05 — Present</div>
+<div>
+<div class="proj-title">GRASP Lab, University of Pennsylvania</div>
+<div class="proj-role">Mentor: <a class="link"   href="https://danielgehrig18.github.io/"  target="_blank" rel="noopener">Dr. Daniel Gehrig<i class="fas fa-external-link-alt"></i></a></div>
+<ul class="proj-desc">
+<li>Developing a reinforcement-learning-based, delay-aware streaming control framework for real-time decision-making under variable planning latency.</li>
+<li>Extending the framework to parallel environments with heterogeneous planning delays.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://www.grasp.upenn.edu/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2026.03 — Present</div>
+<div>
+<div class="proj-title">Lifelong Machine Learning Group, University of Pennsylvania</div>
+<div class="proj-role">Mentor: <a class="link"   href="https://www.cis.upenn.edu/~eeaton/"  target="_blank" rel="noopener">Prof. Eric Eaton<i class="fas fa-external-link-alt"></i></a><br>Collaborator: Dr. Marcel Hussing</div>
+<ul class="proj-desc">
+<li>Fine-tuning and evaluating π0/π0.5 on LIBERO-Plus, using attention analysis to study language understanding and robustness in vision-language-action (VLA) models.</li>
+<li>Investigating reliable autonomous decision-making for VLA models, enabling robots to recognize when a task requires clarification, assistance, or safe termination before resuming execution.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://lifelongml.seas.upenn.edu/"  target="_blank" rel="noopener">&#8599; Group Website<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="proj-item">
 <div class="proj-period">2024.07 — 2026.01</div>
 <div>
 <div class="proj-title">Robot Control Lab, Tsinghua University</div>
-<div class="proj-role">Research Assistant &middot; Mentor: <a class="link"   href="https://www.au.tsinghua.edu.cn/info/1110/1578.htm"  target="_blank" rel="noopener">Prof. Mingguo Zhao<i class="fas fa-external-link-alt"></i></a> &middot; On-site → remote<br>Collaborator: Dr. Qingkai Li</div>
+<div class="proj-role">Research Assistant &middot; Mentor: <a class="link"   href="https://www.au.tsinghua.edu.cn/en/info/1110/3296.htm"  target="_blank" rel="noopener">Prof. Mingguo Zhao<i class="fas fa-external-link-alt"></i></a> &middot; On-site → remote<br>Collaborator: Dr. Qingkai Li</div>
 <ul class="proj-desc">
 <li>Implemented multimodal fusion perception for robotic arms using attention mechanisms and imitation learning for multiple tasks.
 <figure class="proj-demo">
@@ -385,7 +410,17 @@ Your browser does not support embedded video. <a href="/videos/bird-expulsion-de
 </div>
 </section>
 <section class="section" id="experience">
-<div class="section-title">Industry Experience</div>
+<div class="section-title">Teaching &amp; Industry Experience</div>
+<div class="proj-item">
+<div class="proj-period">Fall 2026</div>
+<div>
+<div class="proj-title">University of Pennsylvania</div>
+<div class="proj-role">Teaching Assistant</div>
+<ul class="proj-desc">
+<li>ESE 4070/5070: Introduction to Networks and Protocols.</li>
+</ul>
+</div>
+</div>
 <div class="proj-item">
 <div class="proj-period">2023.12 — 2024.01<br>2024.03 — 2024.06</div>
 <div>
