@@ -33,7 +33,10 @@ html { scroll-behavior: smooth; font-size: 18px; }
 .hero-info { flex: 1; min-width: 0; padding-top: 4px; }
 .hero-name { font-size: 1.95rem; font-weight: 700; color: #1c1c2e; line-height: 1.2; margin-bottom: 5px; }
 .hero-phonetic { color: #999; font-size: 0.87rem; margin-bottom: 16px; letter-spacing: 0.01em; }
-.hero-bio { color: #333; font-size: 0.95rem; line-height: 1.75; margin-bottom: 18px; }
+.hero-bio { color: #333; font-size: 0.95rem; line-height: 1.75; margin-bottom: 8px; }
+.hero-research { color: #333; font-size: 0.9rem; line-height: 1.65; padding-left: 20px; margin: 0 0 18px; }
+.hero-research li { margin-bottom: 5px; padding-left: 2px; }
+.hero-research li:last-child { margin-bottom: 0; }
 .hero-badges { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
 .hero-badge { background: #eef3fc; border: 1px solid #c6d6f0; color: #1a56b0; border-radius: 4px; padding: 3px 10px; font-size: 0.79rem; }
 .hero-contacts { display: flex; gap: 18px; flex-wrap: wrap; }
@@ -143,7 +146,13 @@ html { scroll-behavior: smooth; font-size: 18px; }
 <div class="hero-info">
 <h1 class="hero-name">Qianming Huang</h1>
 <div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /&#712;t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
-<p class="hero-bio">Hello! I am a master's student in <strong>Electrical Engineering</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests include <strong>robotics</strong> and <strong>machine learning</strong>. I am particularly interested in how robots can better understand and interact with complex real-world environments.</p>
+<p class="hero-bio">Hello! I am a master's student in <strong>Electrical Engineering</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests lie at the intersection of <strong>robotics</strong> and <strong>machine learning</strong>, with a focus on human-centered robot learning. I am particularly interested in:</p>
+<ul class="hero-research">
+<li><strong>Learning from Humans</strong> — acquiring skills through demonstrations and feedback.</li>
+<li><strong>Learning to Understand Humans</strong> — interpreting human intentions, preferences, and needs.</li>
+<li><strong>Learning with Humans</strong> — enabling adaptive collaboration through interaction and clarification.</li>
+<li><strong>Learning to Help Humans</strong> — developing reliable and intelligent robots that can meaningfully assist people in the real world.</li>
+</ul>
 <div class="hero-badges">
 <span class="hero-badge">🏛️ University of Pennsylvania</span>
 <span class="hero-badge">🤖 Robotics &amp; Machine Learning</span>
