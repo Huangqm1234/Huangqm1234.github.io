@@ -54,7 +54,7 @@ html { scroll-behavior: smooth; font-size: 18px; }
 /* ---- Seek note ---- */
 .seek-note { background: #eef3fc; border-left: 3px solid #1565c0; border-radius: 0 6px 6px 0; color: #1a56b0; font-size: 0.92rem; font-weight: 500; line-height: 1.65; padding: 13px 18px; margin-bottom: 26px; }
 /* ---- Publications ---- */
-.pub-item { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid #f0f0f4; align-items: flex-start; }
+.pub-item { display: flex; gap: 14px; padding: 15px 0; border-bottom: 1px solid #f0f0f4; align-items: flex-start; scroll-margin-top: 70px; }
 .pub-item:last-child { border-bottom: none; }
 .pub-num { flex-shrink: 0; width: 30px; color: #1565c0; font-weight: 600; font-size: 0.86rem; padding-top: 2px; }
 .pub-title { font-weight: 600; color: #1c1c2e; font-size: 0.93rem; line-height: 1.55; margin-bottom: 5px; }
@@ -146,12 +146,11 @@ html { scroll-behavior: smooth; font-size: 18px; }
 <div class="hero-info">
 <h1 class="hero-name">Qianming Huang</h1>
 <div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /&#712;t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
-<p class="hero-bio">Hi! I am a master's student studying <strong>robotics</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests lie at the intersection of <strong>robotics</strong> and <strong>machine learning</strong>, with a focus on human-centered robot learning. I am particularly interested in:</p>
+<p class="hero-bio">Hi! I'm a master's student in <strong>electrical engineering</strong> with a concentration in <strong>robotics</strong> at the <strong>University of Pennsylvania</strong>. I'm from Beijing, China, and my research focuses on building robots that can follow human instructions reliably and adapt to changing conditions in real time.</p>
 <ul class="hero-research">
-<li><strong>Learning from Humans</strong> — acquiring skills through demonstrations and feedback.</li>
-<li><strong>Learning to Understand Humans</strong> — interpreting human intentions, preferences, and needs.</li>
-<li><strong>Learning with Humans</strong> — enabling adaptive collaboration through interaction and clarification.</li>
-<li><strong>Learning to Help Humans</strong> — developing reliable and intelligent robots that can meaningfully assist people in the real world.</li>
+<li><strong>Reliable robot learning</strong> — studying how vision-language-action models ground instructions in what they see and recognize when to abstain.</li>
+<li><strong>Real-time robot control</strong> — developing planning methods that adapt to changing computation and control delays.</li>
+<li><strong>Multimodal perception</strong> — using vision, audio, and other sensors to guide robot behavior under imperfect observations.</li>
 </ul>
 <div class="hero-badges">
 <span class="hero-badge">🏛️ University of Pennsylvania</span>
@@ -176,13 +175,13 @@ GitHub
 <div class="edu-period">2025.08 — Present</div>
 <div>
 <div class="edu-school">University of Pennsylvania</div>
-<div class="edu-degree">M.S. &middot; Electrical Engineering (Concentration: Robotics) &middot; GPA: 3.9/4.0</div>
+<div class="edu-degree">M.S.E. in Electrical Engineering (Robotics Concentration) &middot; GPA 3.9/4.0 &middot; Expected May 2027</div>
 </div>
 </div>
 <div class="edu-item">
 <div class="edu-period">2021.09 — 2025.07</div>
 <div>
-<div class="edu-school">China University of Geosciences, Beijing</div>
+<div class="edu-school">China University of Geosciences (Beijing)</div>
 <div class="edu-degree">B.Eng. &middot; Computer Science and Technology &middot; GPA: 3.83/4.0</div>
 </div>
 </div>
@@ -190,46 +189,48 @@ GitHub
 <section class="section" id="research">
 <div class="section-title">Research Experience</div>
 <div class="proj-item">
-<div class="proj-period">2026.05 — Present</div>
-<div>
-<div class="proj-title">GRASP Lab, University of Pennsylvania</div>
-<div class="proj-role">Collaborators: <a class="link"   href="https://danielgehrig18.github.io/"  target="_blank" rel="noopener">Dr. Daniel Gehrig<i class="fas fa-external-link-alt"></i></a> and <a class="link"   href="https://arjun-krishna.github.io/"  target="_blank" rel="noopener">Arjun Krishna<i class="fas fa-external-link-alt"></i></a></div>
-<ul class="proj-desc">
-<li>Developing a reinforcement-learning-based, delay-aware streaming control framework for real-time decision-making under variable planning latency.</li>
-<li>Extending the framework to parallel environments with heterogeneous planning delays.</li>
-</ul>
-<a class="link"  class="pub-link"  href="https://www.grasp.upenn.edu/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
-</div>
-</div>
-<div class="proj-item">
 <div class="proj-period">2026.03 — Present</div>
 <div>
 <div class="proj-title">Lifelong Machine Learning Group, University of Pennsylvania</div>
 <div class="proj-role">Mentor: <a class="link"   href="https://www.cis.upenn.edu/~eeaton/"  target="_blank" rel="noopener">Prof. Eric Eaton<i class="fas fa-external-link-alt"></i></a><br>Collaborator: <a class="link"   href="https://marcelhussing.github.io/"  target="_blank" rel="noopener">Dr. Marcel Hussing<i class="fas fa-external-link-alt"></i></a></div>
 <ul class="proj-desc">
-<li>Fine-tuning and evaluating π0/π0.5 on LIBERO-Plus, using attention analysis to study language understanding and robustness in vision-language-action (VLA) models.</li>
-<li>Investigating reliable autonomous decision-making for VLA models, enabling robots to recognize when a task requires clarification, assistance, or safe termination before resuming execution.</li>
+<li>Fine-tuned and evaluated π<sub>0</sub> and π<sub>0.5</sub> on LIBERO-Plus to assess language grounding and robustness to changes in instructions and visual inputs.</li>
+<li>Tested instruction substitutions, object swaps, and missing targets to identify when the models relied on visual shortcuts or predicted actions unsupported by the instruction or scene.</li>
+<li>Used attention rollout to examine how visual and language inputs influence action predictions. I'm now studying how attention patterns and hidden states can help models detect unsupported actions and abstain before execution.</li>
 </ul>
 <a class="link"  class="pub-link"  href="https://lifelongml.seas.upenn.edu/"  target="_blank" rel="noopener">&#8599; Group Website<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
 <div class="proj-item">
+<div class="proj-period">2026.05 — Present</div>
+<div>
+<div class="proj-title">GRASP Lab, University of Pennsylvania</div>
+<div class="proj-role">Collaborators: <a class="link"   href="https://danielgehrig18.github.io/"  target="_blank" rel="noopener">Dr. Daniel Gehrig<i class="fas fa-external-link-alt"></i></a> and <a class="link"   href="https://arjun-krishna.github.io/"  target="_blank" rel="noopener">Arjun Krishna<i class="fas fa-external-link-alt"></i></a></div>
+<ul class="proj-desc">
+<li>Developed a TD-MPC2 planning framework that adjusts test-time computation to the system state and planning latency. Implemented streaming planning and predictive delay compensation for real-time control.</li>
+<li>Built Isaac Lab training and evaluation pipelines for CartPole, Ant, and Hopper to compare zero-delay, non-predictive, and predictive planning.</li>
+<li>Studied trade-offs among computation, world-model accuracy, and control performance. Preliminary results showed improvements over fixed-configuration planning baselines.</li>
+</ul>
+<a class="link"  class="pub-link"  href="https://www.grasp.upenn.edu/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
+</div>
+</div>
+<div class="proj-item">
 <div class="proj-period">2024.07 — 2026.01</div>
 <div>
-<div class="proj-title">Robot Control Lab, Tsinghua University</div>
+<div class="proj-title">Robot Control Lab, Department of Automation, Tsinghua University</div>
 <div class="proj-role">Research Assistant &middot; Mentor: <a class="link"   href="https://www.au.tsinghua.edu.cn/en/info/1110/3296.htm"  target="_blank" rel="noopener">Prof. Mingguo Zhao<i class="fas fa-external-link-alt"></i></a> &middot; On-site → remote<br>Collaborator: Dr. Qingkai Li</div>
 <ul class="proj-desc">
-<li>Implemented multimodal fusion perception for robotic arms using attention mechanisms and imitation learning for multiple tasks.
+<li>Developed an attention-guided Multimodal Sense Transformer (MST) for adaptive vision and audio fusion in Diffusion Policy. It achieved <strong>93.3% task success</strong> under visual occlusion and reduced pouring-volume error by <strong>62.9%</strong> compared with feature concatenation.
 <figure class="proj-demo">
 <video controls playsinline preload="metadata" aria-label="Robotic arm demonstration">
 <source src="/videos/robotic-arm-demo.mp4" type="video/mp4">
 Your browser does not support embedded video. <a href="/videos/robotic-arm-demo.mp4">Download the demo video</a>.
 </video>
-<figcaption>The model learns to focus on the more informative modality: it pays more attention to vision when visual input is available, and increases attention to audio when vision is affected.</figcaption>
+<figcaption>The model pays more attention to vision when the scene is visible and shifts attention toward audio when the view is obstructed.</figcaption>
 </figure>
 </li>
-<li>Developed attention visualization algorithms and imitation learning data acquisition systems.</li>
-<li>Studied brain-inspired control, wrote a review of spiking neural networks, and explored reinforcement learning for legged robot control.
+<li>Used attention rollout to visualize how the model weighs vision and audio, and built a teleoperation system to collect demonstrations for imitation learning.</li>
+<li>Studied brain-inspired control, reviewed the literature on spiking neural networks, and explored reinforcement learning for legged robot control.
 <div class="proj-demo-pair">
 <img    
                        lazyload
@@ -254,8 +255,8 @@ Your browser does not support embedded video. <a href="/videos/robotic-arm-demo.
 <div class="proj-title">Intelligent Biomimetic Design Lab, Peking University</div>
 <div class="proj-role">Research Assistant &middot; Mentor: <a class="link"   href="http://www2.coe.pku.edu.cn/subpaget.asp?id=58"  target="_blank" rel="noopener">Prof. Guangming Xie<i class="fas fa-external-link-alt"></i></a><br>Collaborators: Dr. Yufan Zhai, Dr. Ruosi Liu</div>
 <ul class="proj-desc">
-<li>Designed an LSTM-based spatial perception algorithm using artificial lateral line sensor data for real-time position sensing in underwater robotic fish.</li>
-<li>Developed a global vision-based trajectory tracking algorithm using MMTracking to analyze robotic fish swimming trajectories.
+<li>Developed an attention-enhanced LSTM that suppresses noise in artificial lateral-line signals and uses their temporal patterns to estimate relative position underwater.</li>
+<li>Implemented MixFormer-based visual tracking to reconstruct robotic fish trajectories despite water refraction and intermittent occlusion.
 <figure class="proj-demo">
 <video controls playsinline preload="metadata" aria-label="Robotic fish trajectory tracking demonstration">
 <source src="/videos/robotic-fish-tracking-demo.mp4" type="video/mp4">
@@ -266,35 +267,37 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <li>Contributed to embedded hardware and software integration and maintenance of robotic fish systems.</li>
 </ul>
 <a class="link"  class="pub-link"  href="https://en.ibdl.pku.edu.cn/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
+<a class="pub-link" href="#pub-ijrr">Related IJRR paper</a>
 </div>
 </div>
 </section>
 <section class="section" id="publications">
 <div class="section-title">Publications &amp; Software Copyright</div>
-<div class="pub-item">
+<div class="pub-item" id="pub-ijrr">
 <div class="pub-num">[1]</div>
 <div>
 <div class="pub-title">Real-time Position and Orientation Estimation in Dual Self-Propelled Swimmers Using Artificial Lateral Line Systems with Intermittent Swimming Strategy</div>
 <div class="pub-authors">Ruosi Liu*, Yufan Zhai*, <strong>Qianming Huang</strong>, Zhenyu Ding, Yang Ding, Guangming Xie</div>
-<div class="pub-venue">International Journal of Robotics Research (IJRR) &middot; Accepted, 2026 &middot; <span style="font-size: 0.78rem;">* Equal contribution</span></div>
-<a class="link"  class="pub-link"  href="https://journals.sagepub.com/doi/epub/10.1177/02783649261442970"  target="_blank" rel="noopener">&#8599; SAGE Journals<i class="fas fa-external-link-alt"></i></a>
+<div class="pub-venue">The International Journal of Robotics Research (IJRR) &middot; Published online April 30, 2026 &middot; <span style="font-size: 0.78rem;">* Equal contribution</span></div>
+<a class="link"  class="pub-link"  href="https://doi.org/10.1177/02783649261442970"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
-<div class="pub-item">
+<div class="pub-item" id="pub-ccc">
 <div class="pub-num">[2]</div>
 <div>
 <div class="pub-title">Machine Learning Assisted Three-dimensional Sparse Point Clouds Filling for Geological Spatial Modeling</div>
 <div class="pub-authors"><strong>Qianming Huang</strong>, Bowen Yao, Huarui Wu, Baolong Feng, Yeyuan Li, Zixuan Guo, Ling Bu</div>
-<div class="pub-venue">43rd Chinese Control Conference &middot; 2024.07</div>
-<a class="link"  class="pub-link"  href="https://xploreqa.ieee.org/document/10661896"  target="_blank" rel="noopener">&#8599; IEEE Xplore<i class="fas fa-external-link-alt"></i></a>
+<div class="pub-venue">43rd Chinese Control Conference (CCC) &middot; pp. 3661–3666 &middot; 2024</div>
+<a class="link"  class="pub-link"  href="https://doi.org/10.23919/CCC63176.2024.10661896"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
 <div class="pub-item">
 <div class="pub-num">[3]</div>
 <div>
-<div class="pub-title">Classification of Fruits Based on CNN, SVM, and PCA</div>
+<div class="pub-title">Classification of Fruits Based on CNN, SVM and PCA</div>
 <div class="pub-authors"><strong>Qianming Huang</strong></div>
-<div class="pub-venue">2023 Intl. Conference on Data Analysis and Machine Learning (DAML 2023) &middot; 2023.12</div>
+<div class="pub-venue">International Conference on Data Analysis and Machine Learning (DAML) &middot; pp. 457–465 &middot; 2023</div>
+<a class="link"  class="pub-link"  href="https://doi.org/10.5220/0012815000003885"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 <a class="link"  class="pub-link"  href="https://www.scitepress.org/Papers/2023/128150/128150.pdf"  target="_blank" rel="noopener">&#8599; PDF<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
@@ -303,8 +306,8 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <div>
 <div class="pub-title">Practical Asymmetry and Its Effects on Power and Bandwidth Performance in Bi-stable Vibration Energy Harvesters</div>
 <div class="pub-authors">Qingzhao Li, Ling Bu, Shiyu Lu, Bowen Yao, <strong>Qianming Huang</strong>, Xiaohong Wang</div>
-<div class="pub-venue">Mechanical Systems and Signal Processing &middot; 2023.11</div>
-<a class="link"  class="pub-link"  href="https://www.sciencedirect.com/science/article/abs/pii/S0888327023008476"  target="_blank" rel="noopener">&#8599; ScienceDirect<i class="fas fa-external-link-alt"></i></a>
+<div class="pub-venue">Mechanical Systems and Signal Processing &middot; vol. 206, article 110939 &middot; 2024</div>
+<a class="link"  class="pub-link"  href="https://doi.org/10.1016/j.ymssp.2023.110939"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
 <div class="pub-item">
@@ -312,8 +315,8 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <div>
 <div class="pub-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
 <div class="pub-authors">Jiankun Guo, Bowen Yao, <strong>Qianming Huang</strong>, Ling Bu</div>
-<div class="pub-venue">18th IEEE Conference on Industrial Electronics and Applications (ICIEA 2023) &middot; 2023.08</div>
-<a class="link"  class="pub-link"  href="https://ieeexplore.ieee.org/abstract/document/10241876"  target="_blank" rel="noopener">&#8599; IEEE Xplore<i class="fas fa-external-link-alt"></i></a>
+<div class="pub-venue">18th IEEE Conference on Industrial Electronics and Applications (ICIEA) &middot; 2023</div>
+<a class="link"  class="pub-link"  href="https://doi.org/10.1109/ICIEA58696.2023.10241876"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
 <div class="pub-item">
@@ -331,11 +334,10 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <div class="proj-period">2025.11 — 2025.12</div>
 <div>
 <div class="proj-title">Img2GPS</div>
-<div class="proj-role">Team Leader (3 members) &middot; Mentor: CIS 5190 Instructional Staff, University of Pennsylvania</div>
+<div class="proj-role">Team Leader (3 members) &middot; CIS 5190 Course Project, University of Pennsylvania</div>
 <ul class="proj-desc">
-<li>Designed and implemented the full data collection and preprocessing pipeline.</li>
-<li>Built a CNN–Transformer hybrid (ViT-style) architecture for image-to-GPS regression, reaching ~27 m RMSE.</li>
-<li>Developed attention visualization methods to analyze model behavior, improving RMSE from ~32 m to ~27 m.</li>
+<li>Led a three-person team to build an image geolocation system, including the data collection and preprocessing pipeline and a hybrid CNN–Transformer model.</li>
+<li>Used attention visualizations to guide model improvements, reducing localization RMSE from approximately <strong>32 m to 27 m</strong>.</li>
 </ul>
 <figure class="proj-demo">
 <iframe src="https://www.youtube-nocookie.com/embed/fg0Z0NKGIHI" title="Img2GPS Demo Video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -346,33 +348,31 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <div class="proj-item">
 <div class="proj-period">2022.12 — 2024.03</div>
 <div>
-<div class="proj-title">Flexible Exploring Robot Implementation</div>
+<div class="proj-title">Flexible Exploring Robot</div>
 <div class="proj-role">Team Leader (5 members) &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
 <ul class="proj-desc">
-<li>Led a five-person team to design a robot for exploring confined spaces (caves, pipes) with 3D modeling.</li>
-<li>Designed sparse point cloud completion algorithms based on Polynomial Regression, SVR, and Newton Interpolation.</li>
-<li>Accelerated the pipeline on low-performance platforms via parallel computing.</li>
-<li>Contributed to the robot's detection and sensor systems.</li>
+<li>Led a five-person team to build a tactile-sensing robot for confined underground environments, integrating sensors, robotic hardware, and 3D reconstruction.</li>
+<li>Developed a learning-based sparse point cloud completion method that slices and partitions the scene to simplify reconstruction. On highly sparse data, it reached <strong>R<sup>2</sup> = 0.90</strong> and reduced reconstruction MSE by <strong>73.5%</strong> compared with Newton interpolation.</li>
+<li>Used parallel computing to speed up the pipeline on resource-constrained platforms.</li>
 </ul>
+<a class="pub-link" href="#pub-ccc">Related CCC paper</a>
 </div>
 </div>
 <div class="proj-item">
 <div class="proj-period">2023.06 — 2024.05</div>
 <div>
-<div class="proj-title">Bird Expulsion System Implementation</div>
+<div class="proj-title">Bird Detection and Deterrence System</div>
 <div class="proj-role">Member &middot; Mentor: Asst. Prof. Shan Ye &amp; Zhenhua Wang, CUG (Beijing)</div>
 <ul class="proj-desc">
-<li>Built an embedded Raspberry Pi system to detect, track, and expel birds with species-specific mechanisms.</li>
-<li>Modified YOLOv5 with an alpha-IoU bounding-box loss, an extra segmentation head, and additional feature layers.</li>
-<li>Developed a motion prediction algorithm to track bird movements.</li>
-<li>Designed a distributed GPU-host + Pi architecture for efficient real-time detection and tracking.</li>
+<li>Modified the YOLOv5 backbone and added Alpha-IoU loss, a segmentation head, and feature extraction layers, improving detection accuracy for distant birds by approximately <strong>15%</strong>.</li>
+<li>Built a Raspberry Pi-based detection, tracking, and deterrence system with motion prediction. A separate GPU host handled real-time inference.</li>
 </ul>
 <figure class="proj-demo proj-demo--compact">
-<video controls playsinline preload="metadata" aria-label="Bird Expulsion System demonstration">
+<video controls playsinline preload="metadata" aria-label="Bird Detection and Deterrence System demonstration">
 <source src="/videos/bird-expulsion-demo.mp4" type="video/mp4">
 Your browser does not support embedded video. <a href="/videos/bird-expulsion-demo.mp4">Download the demo video</a>.
 </video>
-<figcaption>Bird Expulsion System — Demo Video</figcaption>
+<figcaption>Bird Detection and Deterrence System demo</figcaption>
 </figure>
 </div>
 </div>
@@ -497,10 +497,18 @@ Your browser does not support embedded video. <a href="/videos/bird-expulsion-de
 <div class="proj-item">
 <div class="proj-period">2022.12 — 2023.12</div>
 <div>
-<div class="proj-title">University Soccer Robot Team</div>
-<div class="proj-role">Captain</div>
+<div class="proj-title">University Robot Soccer Team</div>
+<div class="proj-role">Captain &middot; China University of Geosciences (Beijing)</div>
+</div>
+</div>
+<div class="proj-item">
+<div class="proj-period">2023 — 2024</div>
+<div>
+<div class="proj-title">Swimming Honors</div>
 <ul class="proj-desc">
-<li>Led the university soccer robot team.</li>
+<li>National Second-Class Athlete (Swimming), China.</li>
+<li>Outstanding Athlete, 43rd Beijing Collegiate Swimming Championships (2023).</li>
+<li>Gold medals in the men's 50 m and 100 m breaststroke, CUG Swimming Championships (2024).</li>
 </ul>
 </div>
 </div>
@@ -508,27 +516,26 @@ Your browser does not support embedded video. <a href="/videos/bird-expulsion-de
 <section class="section" id="skills">
 <div class="section-title">Skills</div>
 <div class="skills-block">
-<div class="skills-label">Proficient</div>
+<div class="skills-label">Programming</div>
 <div class="skill-tags">
 <span class="skill-tag">Python</span>
 <span class="skill-tag">C++</span>
 <span class="skill-tag">C</span>
-<span class="skill-tag">Linux</span>
-<span class="skill-tag">Raspberry Pi</span>
+<span class="skill-tag">Lua</span>
 </div>
-<div class="skills-label">Familiar</div>
+<div class="skills-label">ML &amp; Robotics</div>
 <div class="skill-tags">
 <span class="skill-tag">PyTorch</span>
-<span class="skill-tag">ROS</span>
-<span class="skill-tag">CUDA</span>
-<span class="skill-tag">OpenMP</span>
-<span class="skill-tag">Qt</span>
 <span class="skill-tag">MuJoCo</span>
-<span class="skill-tag">Lua</span>
-<span class="skill-tag">Onshape</span>
 <span class="skill-tag">Isaac Lab</span>
+<span class="skill-tag">ROS</span>
 <span class="skill-tag">OpenCV</span>
-<span class="skill-tag">OpenGL</span>
+</div>
+<div class="skills-label">Systems &amp; Tools</div>
+<div class="skill-tags">
+<span class="skill-tag">Linux</span>
+<span class="skill-tag">Raspberry Pi</span>
+<span class="skill-tag">OpenMP</span>
 </div>
 <div class="skills-label">Certificate</div>
 <div class="skill-tags"><span class="skill-tag">Huawei HCIA (OpenEuler)</span></div>
