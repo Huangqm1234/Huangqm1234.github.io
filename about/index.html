@@ -148,10 +148,10 @@ html { scroll-behavior: smooth; font-size: 18px; }
 <div class="hero-phonetic">黄前铭 &nbsp;&middot;&nbsp; /&#712;t&#643;i&#603;n m&#618;&#331; hw&#593;&#331;/</div>
 <p class="hero-bio">Hi! I am a master's student studying <strong>robotics</strong> at the <strong>University of Pennsylvania</strong>, originally from Beijing, China. My research interests lie at the intersection of <strong>robotics</strong> and <strong>machine learning</strong>, with a focus on human-centered robot learning. I am particularly interested in:</p>
 <ul class="hero-research">
-<li><strong>Learning from Humans</strong> — acquiring skills through demonstrations and feedback.</li>
-<li><strong>Learning to Understand Humans</strong> — interpreting human intentions, preferences, and needs.</li>
-<li><strong>Learning with Humans</strong> — enabling adaptive collaboration through interaction and clarification.</li>
-<li><strong>Learning to Help Humans</strong> — developing reliable and intelligent robots that can meaningfully assist people in the real world.</li>
+<li><strong>Learning from Humans</strong>: acquiring skills through demonstrations and feedback.</li>
+<li><strong>Learning to Understand Humans</strong>: interpreting human intentions, preferences, and needs.</li>
+<li><strong>Learning with Humans</strong>: enabling adaptive collaboration through interaction and clarification.</li>
+<li><strong>Learning to Help Humans</strong>: developing reliable and intelligent robots that can meaningfully assist people in the real world.</li>
 </ul>
 <div class="hero-badges">
 <span class="hero-badge">🏛️ University of Pennsylvania</span>
@@ -173,10 +173,10 @@ GitHub
 <section class="section" id="education">
 <div class="section-title">Education</div>
 <div class="edu-item">
-<div class="edu-period">2025.08 — Present</div>
+<div class="edu-period">2025.08-2027.05(Expect)</div>
 <div>
 <div class="edu-school">University of Pennsylvania</div>
-<div class="edu-degree">M.S.E. in Electrical Engineering (Robotics Concentration) &middot; GPA 3.9/4.0 &middot; Expected May 2027</div>
+<div class="edu-degree">M.S.E. in Electrical Engineering (Robotics Concentration) &middot; GPA 3.9/4.0</div>
 </div>
 </div>
 <div class="edu-item">
@@ -195,9 +195,10 @@ GitHub
 <div class="proj-title">Lifelong Machine Learning Group, University of Pennsylvania</div>
 <div class="proj-role">Mentor: <a class="link"   href="https://www.cis.upenn.edu/~eeaton/"  target="_blank" rel="noopener">Prof. Eric Eaton<i class="fas fa-external-link-alt"></i></a></div>
 <ul class="proj-desc">
-<li>Fine-tuned and evaluated π<sub>0</sub> and π<sub>0.5</sub> on LIBERO-Plus to assess language grounding and robustness to changes in instructions and visual inputs.</li>
-<li>Tested instruction substitutions, object swaps, and missing targets to identify when the models relied on visual shortcuts or predicted actions unsupported by the instruction or scene.</li>
-<li>Used attention rollout to examine how visual and language inputs influence action predictions. I'm now studying how attention patterns and hidden states can help models detect unsupported actions and abstain before execution.</li>
+<li>Fine-tuned and evaluated π<sub>0</sub> and π<sub>0.5</sub> on LIBERO-Plus, systematically assessing language grounding and robustness under diverse instruction and visual perturbations.</li>
+<li>Designed counterfactual experiments involving instruction substitutions, object swaps, and missing targets, revealing vision-to-action shortcuts and unsupported action execution in VLA models.</li>
+<li>Analyzed Transformer attention patterns using attention rollout to investigate interactions between visual and language and their influence on action prediction.</li>
+<li>Investigating inference-time vision–language–action consistency through attention and hidden-state representations to identify unsupported actions and enable reliable abstention before execution.</li>
 </ul>
 <a class="link"  class="pub-link"  href="https://lifelongml.seas.upenn.edu/"  target="_blank" rel="noopener">&#8599; Group Website<i class="fas fa-external-link-alt"></i></a>
 </div>
@@ -208,9 +209,10 @@ GitHub
 <div class="proj-title">GRASP Lab, University of Pennsylvania</div>
 <div class="proj-role">Collaborators: <a class="link"   href="https://danielgehrig18.github.io/"  target="_blank" rel="noopener">Dr. Daniel Gehrig<i class="fas fa-external-link-alt"></i></a> and <a class="link"   href="https://arjun-krishna.github.io/"  target="_blank" rel="noopener">Arjun Krishna<i class="fas fa-external-link-alt"></i></a></div>
 <ul class="proj-desc">
-<li>Developed a TD-MPC2 planning framework that adjusts test-time computation to the system state and planning latency. Implemented streaming planning and predictive delay compensation for real-time control.</li>
-<li>Built Isaac Lab training and evaluation pipelines for CartPole, Ant, and Hopper to compare zero-delay, non-predictive, and predictive planning.</li>
-<li>Studied trade-offs among computation, world-model accuracy, and control performance. Preliminary results showed improvements over fixed-configuration planning baselines.</li>
+<li>Developed a delay-aware adaptive planning framework based on TD-MPC2, dynamically allocating test-time computation according to the system state and planning latency.</li>
+<li>Implemented streaming planning and predictive delay compensation for real-time control.</li>
+<li>Built training and evaluation pipelines in Isaac Lab for CartPole, Ant, and Hopper, conducting systematic comparisons of zero-delay, non-predictive, and predictive planning strategies.</li>
+<li>Investigated the trade-offs among computational cost, world-model prediction accuracy, and control performance, demonstrating preliminary improvements over fixed-configuration planning baselines.</li>
 </ul>
 <a class="link"  class="pub-link"  href="https://www.grasp.upenn.edu/"  target="_blank" rel="noopener">&#8599; Lab Website<i class="fas fa-external-link-alt"></i></a>
 </div>
@@ -221,7 +223,7 @@ GitHub
 <div class="proj-title">Robot Control Lab, Department of Automation, Tsinghua University</div>
 <div class="proj-role">Mentor: <a class="link"   href="https://www.au.tsinghua.edu.cn/en/info/1110/3296.htm"  target="_blank" rel="noopener">Prof. Mingguo Zhao<i class="fas fa-external-link-alt"></i></a> &middot; On-site → remote</div>
 <ul class="proj-desc">
-<li>Developed an attention-guided Multimodal Sense Transformer (MST) for adaptive vision and audio fusion in Diffusion Policy. It achieved <strong>93.3% task success</strong> under visual occlusion and reduced pouring-volume error by <strong>62.9%</strong> compared with feature concatenation.
+<li>Developed an attention-guided Multimodal Sense Transformer (MST) for adaptive vision-audio fusion in Diffusion Policy, achieving <strong>93.3% task success</strong> under visual occlusion and reducing pouring-volume error by <strong>62.9%</strong> compared to conventional feature concatenation. <a class="link"   href="https://drive.google.com/file/d/1cdDCtcb9hJ6LHmfa-5NubtcqUbd9SEzI/view"  target="_blank" rel="noopener">[Final Report]<i class="fas fa-external-link-alt"></i></a>
 <figure class="proj-demo">
 <video controls playsinline preload="metadata" aria-label="Robotic arm demonstration">
 <source src="/videos/robotic-arm-demo.mp4" type="video/mp4">
@@ -230,7 +232,7 @@ Your browser does not support embedded video. <a href="/videos/robotic-arm-demo.
 <figcaption>The model pays more attention to vision when the scene is visible and shifts attention toward audio when the view is obstructed.</figcaption>
 </figure>
 </li>
-<li>Used attention rollout to visualize how the model weighs vision and audio, and built a teleoperation system to collect demonstrations for imitation learning.</li>
+<li>Developed an attention rollout-based visualization framework for visual and auditory modalities to interpret adaptive sensory attention, and built teleoperation-based data collection systems for imitation learning. <a class="link"   href="https://drive.google.com/file/d/1GqwRKZxhGHmbqpyTtG5s4-gTMXNdNEPn/view?usp=sharing"  target="_blank" rel="noopener">[Report]<i class="fas fa-external-link-alt"></i></a>.</li>
 <li>Studied brain-inspired control, reviewed the literature on spiking neural networks, and explored reinforcement learning for legged robot control.
 <div class="proj-demo-pair">
 <img    
@@ -292,7 +294,7 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <a class="link"  class="pub-link"  href="https://doi.org/10.23919/CCC63176.2024.10661896"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
-<div class="pub-item">
+<div class="pub-item" id="pub-fruits">
 <div class="pub-num">[3]</div>
 <div>
 <div class="pub-title">Classification of Fruits Based on CNN, SVM and PCA</div>
@@ -302,26 +304,8 @@ Your browser does not support embedded video. <a href="/videos/robotic-fish-trac
 <a class="link"  class="pub-link"  href="https://www.scitepress.org/Papers/2023/128150/128150.pdf"  target="_blank" rel="noopener">&#8599; PDF<i class="fas fa-external-link-alt"></i></a>
 </div>
 </div>
-<div class="pub-item">
-<div class="pub-num">[4]</div>
-<div>
-<div class="pub-title">Practical Asymmetry and Its Effects on Power and Bandwidth Performance in Bi-stable Vibration Energy Harvesters</div>
-<div class="pub-authors">Qingzhao Li, Ling Bu, Shiyu Lu, Bowen Yao, <strong>Qianming Huang</strong>, Xiaohong Wang</div>
-<div class="pub-venue">Mechanical Systems and Signal Processing &middot; vol. 206, article 110939 &middot; 2024</div>
-<a class="link"  class="pub-link"  href="https://doi.org/10.1016/j.ymssp.2023.110939"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
-</div>
-</div>
-<div class="pub-item">
-<div class="pub-num">[5]</div>
-<div>
-<div class="pub-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
-<div class="pub-authors">Jiankun Guo, Bowen Yao, <strong>Qianming Huang</strong>, Ling Bu</div>
-<div class="pub-venue">18th IEEE Conference on Industrial Electronics and Applications (ICIEA) &middot; 2023</div>
-<a class="link"  class="pub-link"  href="https://doi.org/10.1109/ICIEA58696.2023.10241876"  target="_blank" rel="noopener">&#8599; DOI<i class="fas fa-external-link-alt"></i></a>
-</div>
-</div>
 <div class="pub-item" id="pub-door-lock">
-<div class="pub-num">[6]</div>
+<div class="pub-num">[4]</div>
 <div>
 <div class="pub-title">Intelligent Control Security Door Lock Based on Narrowband Cellular IoT Technology</div>
 <div class="pub-authors"><strong>Qianming Huang</strong>, Ziyue Feng, Jiajun Xu</div>
@@ -387,6 +371,7 @@ Your browser does not support embedded video. <a href="/videos/bird-expulsion-de
 <li>Produced a report on algorithmic foundations (SVM, PCA, etc.) and benchmarked across methods.</li>
 <li>Deployed the recognition models on a Raspberry Pi for real-world inference.</li>
 </ul>
+<a class="pub-link" href="#pub-fruits">Related paper</a>
 </div>
 </div>
 <div class="proj-item">
@@ -398,26 +383,6 @@ Your browser does not support embedded video. <a href="/videos/bird-expulsion-de
 <li>Integrated hardware and software for Python-based NB-IoT door lock control and optimized information transmission for security and reliability.</li>
 </ul>
 <a class="pub-link" href="#pub-door-lock">Related software copyright</a>
-</div>
-</div>
-<div class="proj-item">
-<div class="proj-period">2022.03 — 2023.05</div>
-<div>
-<div class="proj-title">Practical Asymmetry in Bi-stable Vibration Energy Harvesters</div>
-<div class="proj-role">Member &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
-<ul class="proj-desc">
-<li>Processed experimental data and built mathematical models in Python to analyze power and bandwidth performance.</li>
-</ul>
-</div>
-</div>
-<div class="proj-item">
-<div class="proj-period">2022.06 — 2023.02</div>
-<div>
-<div class="proj-title">High Step-up Reverse-F-Type Coupled Inductor Switch Capacitor Boost Converter</div>
-<div class="proj-role">Member &middot; Mentor: Assoc. Prof. Ling Bu, CUG (Beijing)</div>
-<ul class="proj-desc">
-<li>Processed and visualized experimental data using Python.</li>
-</ul>
 </div>
 </div>
 </section>
